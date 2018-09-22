@@ -1,0 +1,86 @@
+tdpalioclient/ListaCavalli.cpp:  // FIXME scrivici la data giusta
+tdpalioclient/ListaVittorie.cpp:    // FIXME aggiungere barberino
+tdpalioclient/ListaCuffie.cpp:    // FIXME aggiungere ultima vittoria
+tdpalioclient/ListaCuffie.cpp:    // FIXME aggiungere barberino
+tdpalioclient/ChatDialog.cpp:    // FIXME setta il titolo con il nome della contrada
+tdpalioclient/strategiaprove.cpp:    // FIXME ci vorra` anche il range ?????
+tdpalioclient/SceltaFantino.cpp:    // FIXME aggiungere barberino
+tdpalioclient/Profilo.cpp:  // FIXME controllare che non abbia caratteri strani
+tdpalioclient/SceltaPartiti.cpp:    // FIXME aggiungere barberino
+tdpalioclient/nuovogiocatore.cpp:        g.setContrada(indice[ui.contradaCombo->currentIndex()]); // FIXME
+tdpalioclient/tdpalioclient.cpp://FIXME secondo me va spostato
+tdpalioclient/tdpalioclient.cpp:  // FIXME !!!!!!!!!!!!!!!!!
+tdpalioclient/tdpalioclient.cpp:  // FIXME rimettere e provare
+tdpalioclient/tdpalioclient.cpp:    // FIXME spostare dentro profilo
+tdpalioclient/tdpalioclient.cpp:  // FIXME fissare il problema del file vuoto 
+tdpalioclient/tdpalioclient.cpp:  // FIXME aggiungi stemma comune
+tdpalioclient/tdpalioclient.cpp:    // FIXME se la finestra e` non modale devo farlo diventare un 
+tdpalioclient/tdpalioclient.cpp:  // FIXME aggiungi stemma comune
+tdpalioclient/tdpalioclient.cpp:  // FIXME aggiungi stemma comune
+tdpalioclient/tdpalioclient.cpp:  // FIXME aggiungi stemma comune
+tdpalioclient/tdpalioclient.cpp:    // FIXME per il futuro aggiungere anche giubilo del popolo festante
+tdpalioclient/tdpalioclient.cpp:    // FIXME aggiungere tempo casuale meglio se legato al tipo di cavallo precedente
+tdpalioclient/tdpalioclient.cpp:  // FIXME aspetta la pressione di un tasto prima di mandare il messaggio di ready
+tdpalioclient/tdpalioclient.cpp:  // FIXME dimensioni rispetto alla finestra principale
+tdpalioclient/tdpalioclient.cpp:  // FIXME gestire estensione del file
+tdpalioclient/tdpalioclient.cpp:      // FIXME troppo complicato perche` scomodare giocatore ????
+tdpalioclient/tdpalioclient.cpp:    // FIXME migliorare la scritta
+tdpalioclient/tdpalioclient.cpp:	// FIXME in qualche modo va settato il path
+tdpalioclient/tdpalioclient.cpp:	// FIXME controlla se localmente c'e` gia` un server che gira
+tdpalioclient/tdpalioclient.cpp:    // FIXME cambia la chiusura
+tdpalioclient/tdpalioclient.cpp:  // FIXME cambiarlo in QVector<int>
+tdpaliocommon/MyStreamer.cc:// FIXME prevedi giocatori con nomi o cognomi con spazi
+tdpaliocommon/giocatore.cc:// FIXME prevedi giocatori con nomi o cognomi con spazi
+tdpaliocommon/giocatore.h://FIXME da ogni classe "base" togliere namespace std;
+tdpaliocommon/MyStreamer.h://FIXME da ogni classe "base" togliere namespace std;
+tdpalioserver/corsa.cpp:    // FIXME fissare le posizioni secondo l'ordine alla mossa
+tdpalioserver/corsa.cpp:  // FIXME al primo che arriva alla fonte assegnare un vantaggio totale per il palio
+tdpalioserver/corsa.cpp:    // FIXME per il momento considera vicino solo contrade allo stesso colonnino
+tdpalioserver/corsa.cpp:    // FIXME controlla se e` in curva e calcola probabilita di caduta in base al cavallo e al fantino
+tdpalioserver/corsa.cpp:    // FIXME oltre che alla velocita e alla direzione
+tdpalioserver/corsa.cpp:  // FIXME aggiungere partito per ostacolare contrade al canape
+tdpalioserver/corsa.cpp:      posBarberi[canape[i]].colonnino += 10;  // FIXME calibrare il vantaggio
+tdpalioserver/corsa.cpp:    posBarberi[canape[i]].colonnino += (int)prontezza;  // FIXME calibrare il vantaggio
+tdpalioserver/corsa.cpp:      // FIXME fermati e rallenta a quello davanti
+tdpalioserver/corsa.cpp:      // FIXME deve forse rallentare
+tdpalioserver/tdpalioserver.cc:  // FIXME definisci il seed
+tdpalioserver/tdpalioserver.cc:    // FIXME controllare che NON ci siano sockets disconnessi prima di fare push_back
+tdpalioserver/tdpalioserver.cc:    // FIXME NON C"E` IL BLOCCO SE GIA` 17 umani ?????????????
+tdpalioserver/tdpalioserver.cc:    // FIXME ci vuole ???
+tdpalioserver/tdpalioserver.cc:	  // FIXME compattare
+tdpalioserver/tdpalioserver.cc:	  // FIXME si ricorda chi e` in attesa ???
+tdpalioserver/tdpalioserver.cc:	// FIXME ci vuole ???????
+tdpalioserver/tdpalioserver.cc:	// FIXME CREDO CHE VADA FIXATO PER QUANDO RIPRENDI IL GIOCO
+tdpalioserver/tdpalioserver.cc:	    // FIXME MANDA ANCHE IL NUMERO DELLA CONTRADA PER LA CHAT
+tdpalioserver/tdpalioserver.cc:	    // FIXME che cazzo e` ?
+tdpalioserver/tdpalioserver.cc:	// FIXME Prima scelta del fantino (tutte le contrade devono avere un fantino prima di ogni prova
+tdpalioserver/tdpalioserver.cc:    // FIXME ci vuole ????
+tdpalioserver/tdpalioserver.cc:	  // FIXME metti al corrente della situazione il client AI
+tdpalioserver/tdpalioserver.cc:	  // FIXME prova a ripartire dall'ultimo messaggio inviato
+tdpalioserver/tdpalioserver.cc:  // FIXME forse e` meglio eliminare il socket direttamente piuttosto che lasciarlo
+tdpalioserver/tdpalioserver.cc:    // FIXME a questo punto si potrebbe spengere il server...
+tdpalioserver/tdpalioserver.cc:  // FIXME ricambia in QDataStream
+tdpalioserver/tdpalioserver.cc:    // FIXME E` GIUSTO ADESSO ?????????
+tdpalioserver/tdpalioserver.cc:      // FIXME PER IL MOMENTO NON C'E` BALLOTTAGGIO
+tdpalioserver/tdpalioserver.cc:  // FIXME vedere se si vuole fare un secondo turno
+tdpalioserver/tdpalioserver.cc:    // FIXME aggiungere vincitore della prova
+tdpalioserver/tdpalioserver.cc:	// FIXME questo dipendera` dal posto ????
+tdpalioserver/tdpalioserver.cc:	// FIXME FORSE NON FUNZIONA !!!!!
+tdpalioserver/tdpalioserver.cc:  // FIXME per la versione alfa niente grafica
+tdpalioserver/tdpalioserver.cc:  // FIXME magari prima ci puoi mettere la scelta della strategia di corsa
+tdpalioserver/tdpalioserver.cc:  // FIXME aggiorna tutte le classifiche
+tdpalioserver/tdpalioserver.cc:  //FIXME per il momento la forma e` veramente casuale da 3 a 10
+tdpalioserver/corsa.h:  ~Corsa() { //FIXME distruggi i vari puntatori 
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME dove lo prende round ???
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME strategia alcune volte e` 0-1-2 altre 2-1-0
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME al primo giro consenti 2 scelte ??????????
+tdpalioserver/tdpalioaiclient.cpp:    // FIXME riempi il numero per ogni barbero
+tdpalioserver/tdpalioaiclient.cpp:    // FIXME FORSE AZZERA STREAMER
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME piu` di un round ?????????
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME PER LA VERSIONE BETA SCEGLI 334 SEMPRE
+tdpalioserver/tdpalioaiclient.cpp:    // FIXME e` giusto ????????????
+tdpalioserver/tdpalioaiclient.cpp:    // FIXME togli quelle che hanno la nemica in campo 
+tdpalioserver/tdpalioaiclient.cpp:    // FIXME togli anche la nemica del client !!!!!!!!!!!
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME come determina il suo stesso indice del barbero intendo ????
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME azzera partitoStreamer
+tdpalioserver/tdpalioaiclient.cpp:  // FIXME fissa la scelta per considerare anche il pagamento.

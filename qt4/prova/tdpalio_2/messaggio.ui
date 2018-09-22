@@ -1,0 +1,272 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>Messaggio</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>Messaggio</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>475</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="baseSize">
+        <size>
+            <width>500</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Messaggio</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout86</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout84</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout83</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer22</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>130</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLayoutWidget">
+                                    <property name="name">
+                                        <cstring>layout81</cstring>
+                                    </property>
+                                    <vbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>contradaLabel</cstring>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy>
+                                                    <hsizetype>3</hsizetype>
+                                                    <vsizetype>5</vsizetype>
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="font">
+                                                <font>
+                                                    <pointsize>18</pointsize>
+                                                </font>
+                                            </property>
+                                            <property name="text">
+                                                <string>Contrada Sovrana dell'Istrice</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>capitanoLabel</cstring>
+                                            </property>
+                                            <property name="font">
+                                                <font>
+                                                    <pointsize>12</pointsize>
+                                                </font>
+                                            </property>
+                                            <property name="text">
+                                                <string>textLabel5</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton">
+                                            <property name="name">
+                                                <cstring>leggiButton</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Leggi messaggio</string>
+                                            </property>
+                                            <property name="toggleButton">
+                                                <bool>true</bool>
+                                            </property>
+                                        </widget>
+                                    </vbox>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer22_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>110</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                        <widget class="QListView">
+                            <column>
+                                <property name="text">
+                                    <string>Column 1</string>
+                                </property>
+                                <property name="clickable">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="resizable">
+                                    <bool>true</bool>
+                                </property>
+                            </column>
+                        <item>
+                            <property name="text">
+                                <string>New Item</string>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap></pixmap>
+                            </property>
+                        </item>
+                            <property name="name">
+                                <cstring>messaggiList</cstring>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout85</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer24</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>okButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>OK</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer25</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>okButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Messaggio</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>leggiButton</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>messaggiList</receiver>
+        <slot>setShown(bool)</slot>
+    </connection>
+    <connection>
+        <sender>leggiButton</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>okButton</receiver>
+        <slot>setShown(bool)</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">messaggio.ui.h</include>
+</includes>
+<slots>
+    <slot>InserisciMessaggio( QString mex, bool check )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

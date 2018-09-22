@@ -1,0 +1,237 @@
+rett. 312.6 mm
+ 31.26 
+ 0 
+rett. 104.2 mm
+ 10.42 
+ 0 
+rett. 54.2 mm
+ 5.42 
+ 0 
+rett. 50 mm
+ 5 
+ 0 
+rett. 33.6 mm
+ 3.36 
+ 0 
+rett. 17.2 mm
+ 1.72 
+ 0 
+R1 30ø dx
+ 19.46 
+-30 
+R1 30ø sx
+ 19.46 
+ 30 
+R1 24ø dx
+ 19.46 
+-24 
+R1 24ø sx
+ 19.46 
+ 24 
+R1 6ø dx
+ 19.46 
+-6 
+R1 6ø sx
+ 19.46 
+ 6 
+R2 30ø dx
+ 22.82 
+-30 
+R2 30ø sx
+ 22.82 
+ 30 
+R2 24ø dx
+ 22.82 
+-24 
+R2 24ø sx
+ 22.82 
+ 24 
+R2 6ø dx
+ 22.82 
+-6 
+R2 6ø sx
+ 22.82 
+ 6 
+R3 30ø dx
+ 26.18 
+-30 
+R3 30ø sx
+ 26.18 
+ 30 
+R3a 30ø dx
+ 29.54 
+-30 
+R3a 30ø sx
+ 29.54 
+ 30 
+R3a 15ø dx
+ 29.54 
+-15 
+R3a 15ø sx
+ 29.54 
+ 15 
+R4 15ø dx
+ 32.9 
+-15 
+R4 15ø sx
+ 32.9 
+ 15 
+R5 15ø dx
+ 36.26 
+-15 
+R5 15ø sx
+ 36.26 
+ 15 
+R6 15ø dx
+ 48 
+-15 
+R6 15ø sx
+ 48 
+ 15 
+R7 12ø dx
+ 76.5 
+-12 
+R7 12ø sx
+ 76.5 
+ 12 
+scambio R1 24ø dx
+ 2 
+ 74 
+scambio R1 24ø dx
+ 2 
+ 74 
+scambio R1 24ø dx
+ 2 
+ 74 
+scambio R1 24ø sx
+ 2 
+ 75 
+scambio R1 24ø sx
+ 2 
+ 75 
+scambio R1 24ø sx
+ 2 
+ 75 
+scambio R5 15ø dx
+ 67 
+ 76 
+scambio R5 15ø dx
+ 67 
+ 76 
+scambio R5 15ø dx
+ 67 
+ 76 
+scambio R5 15ø sx
+ 67 
+ 77 
+scambio R5 15ø sx
+ 67 
+ 77 
+scambio R5 15ø sx
+ 67 
+ 77 
+scambio R7 10ø dx
+ 69 
+ 78 
+scambio R7 10ø dx
+ 69 
+ 78 
+scambio R7 10ø dx
+ 69 
+ 78 
+scambio R7 10ø sx
+ 69 
+ 79 
+scambio R7 10ø sx
+ 69 
+ 79 
+scambio R7 10ø sx
+ 69 
+ 79 
+scambio R1 R2 dx
+ 70 
+ 72 
+scambio R1 R2 dx
+ 70 
+ 73 
+scambio R1 R2 dx
+ 70 
+ 72 
+scambio R1 R2 sx
+ 71 
+ 73 
+scambio R1 R2 sx
+ 71 
+ 72 
+scambio R1 R2 sx
+ 71 
+ 73 
+X 112.6 mm 15ø
+ 67 
+-15 
+X 112.6 mm 15ø
+ 67 
+ 15 
+X 129.8 mm 15ø
+ 68 
+-15 
+X 129.8 mm 15ø
+ 68 
+ 15 
+X 104.2 mm 30ø
+ 2 
+-30 
+X 104.2 mm 30ø
+ 2 
+ 30 
+scambio 3 vie
+ 67 
+ 27 
+scambio 3 vie
+ 67 
+ 27 
+scambio 3 vie
+ 67 
+ 27 
+scambio 3 vie
+ 67 
+ 27 
+rett. 112.6 mm
+ 11.26 
+ 0 
+rett. 129.8 mm
+ 12.98 
+ 0 
+rett. 155.0 mm
+ 15.5 
+ 0 
+rett. 42ø dx
+ 11.85 
+-5.85 
+rett. 42ø sx
+ 11.85 
+ 5.85 
+R2 42ø dx
+ 22.82 
+-42 
+R2 42ø sx
+ 22.82 
+ 42 
+
+ 7.92 
+-24 
+
+ 7.92 
+ 24 
+
+ 11 
+-15 
+
+ 11 
+ 15 
+
+ 15.43 
+-12 
+
+ 15.43 
+ 12 

@@ -1,0 +1,12 @@
+#ifndef LIB_LOGGING_GLOBAL_H
+#define LIB_LOGGING_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(LOGGING_LIBRARY)
+#  define LOGGINGSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define LOGGINGSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // LIB_LOGGING_GLOBAL_H

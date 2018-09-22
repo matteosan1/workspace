@@ -1,0 +1,27 @@
+TLCMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER
+    	    ASN1-TrainID,      
+    	    ASN1-Service,      
+	    ASN1-VehLoc,
+	    ASN1-VehDiag,
+	    ASN1-TrainLocalization  FROM TYPES;    	    
+    
+    --/request/tlcmanager/priority
+    ASN1-PriorityRequest ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	status        ASN1-TrainLocalization,
+    	...
+    }
+
+    --/status/tlcmanager/priority
+    ASN1-PriorityStatus ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        inProgress  BOOLEAN,
+        ...
+    }
+
+END
+
+
+     

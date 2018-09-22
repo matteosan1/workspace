@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MyFlowersActivity!</string>
+    <string name="app_name">MyFlowers</string>
+    <string name="desc">MyFlowers - MatteoSoftware (2012)</string>
+
+</resources>

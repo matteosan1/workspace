@@ -1,0 +1,103 @@
+#ifndef _WIN32_IE
+#define _WIN32_IE   0x0501
+#endif
+
+#include "offertafantino.h"
+#include "resource.h"
+
+#include <commctrl.h>
+#include <iostream>
+
+OffertaFantino::OffertaFantino(Fantino fav, int c, int d, string* e) {
+
+    for(int i=0; i<9; i++)
+        contrade[i] = e[i];
+
+    fantino = fav;
+    contrada = c;
+    io = d;
+}
+
+OffertaFantino::~OffertaFantino()
+{}
+
+BOOL CALLBACK OffertaFantino::DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
+{
+    HWND hEdit;
+    char b[255];
+    string s;
+    switch (Message) {
+        case WM_COMMAND:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                if (LOWORD(wParam) == IDOK)
+                    EndDialog(hwnd, IDOK);
+                if (LOWORD(wParam) == IDCANCEL)
+                    EndDialog(hwnd, IDCANCEL);
+
+                if (LOWORD(wParam) == IDC_NONCORRERE) {
+                    hEdit = GetDlgItem(hwndCtl, IDC_NO_CONTRADA);
+                    EnableWindow(hEdit, true);
+                }
+            }
+            return true;
+        case WM_INITDIALOG:
+            hwndCtl = hwnd;
+            InitDlg();
+            return true;
+        default:
+            return false;
+	}
+}
+
+void OffertaFantino::InitDlg() {
+
+    SetWindowText(hwndCtl, "Offerta fantino");
+
+    SendDlgItemMessage(hwndCtl, IDC_NO_CONTRADA, CB_RESETCONTENT, 0, 0);
+
+    HWND hEdit = GetDlgItem(hwndCtl, IDC_NO_CONTRADA);
+    EnableWindow(hEdit, false);
+
+    for (int i=0; i<9; i++)
+        SendDlgItemMessage(hwndCtl, IDC_NO_CONTRADA, CB_ADDSTRING, 0, (LPARAM) contrade[i].c_str());
+
+    CheckRadioButton(hwndCtl, IDC_CORRERE, IDC_NONCORRERE, IDC_CORRERE);
+
+    string s = "Hai contattato il fantino " + fantino.getNome();
+    SendDlgItemMessage(hwndCtl, IDC_STATIC1, WM_SETTEXT, 0, (LPARAM) s.c_str());
+
+    SendDlgItemMessage(hwndCtl, IDC_SPIN_VINCERE, UDM_SETRANGE, 0, (LPARAM) MAKELONG(500, 0));
+    SendDlgItemMessage(hwndCtl, IDC_SPIN_PERDERE, UDM_SETRANGE, 0, (LPARAM) MAKELONG(250, 0));
+}
+
+BOOL OffertaFantino::OnExit() {
+
+    HWND hEdit = GetDlgItem(hwndCtl, IDC_VINCERE);
+    int nLen = SendMessage(hEdit, WM_GETTEXTLENGTH, 0, 0);
+    char* passwd = new TCHAR[nLen+1];
+    GetWindowText(hEdit, passwd, nLen+1);
+    avincere = atoi(passwd);
+
+    hEdit = GetDlgItem(hwndCtl, IDC_PERDERE);
+    nLen = SendMessage(hEdit, WM_GETTEXTLENGTH, 0, 0);
+    passwd = new TCHAR[nLen+1];
+    GetWindowText(hEdit, passwd, nLen+1);
+    aperdere = atoi(passwd);
+
+    if (IsDlgButtonChecked(hwndCtl, IDC_CORRERE) == BST_CHECKED)
+        radiome = true;
+    else
+        radiome = false;
+
+    if (IsDlgButtonChecked(hwndCtl, IDC_NONCORRERE) == BST_CHECKED) {
+        radioloro = true;
+        hEdit = GetDlgItem(hwndCtl, IDC_NO_CONTRADA);
+        indice = SendMessage(hEdit, CB_GETCURSEL, 0, 0);
+        if (indice >= io)
+            indice++;
+    }
+    else {
+        radioloro = false;
+        indice = -1;
+    }
+}

@@ -1,0 +1,63 @@
+ORING-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+        enterprises,
+        NOTIFICATION-TYPE,
+        FROM SNMPv2-SMI;
+
+oring                OBJECT IDENTIFIER ::= { enterprises 25972 }
+vendorOring          OBJECT IDENTIFIER ::= { oring 100 }
+classProductsAP      OBJECT IDENTIFIER ::= { vendorOring 2 }
+classBGN             OBJECT IDENTIFIER ::= { classProductsAP 0 }
+class2Port           OBJECT IDENTIFIER ::= { classBGN 0 }
+
+Info		     OBJECT IDENTIFIER ::= { class2Port 2 }
+
+DisplayString ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "255a"
+    STATUS       current
+    DESCRIPTION  ""
+    SYNTAX       OCTET STRING (SIZE (0..255))
+
+PortList ::= OCTET STRING
+
+--
+--Info
+--
+
+OperationMode OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "Operation Mode."
+       ::= { Info 1 }
+
+SSID OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "SSID name."
+       ::= { Info 2 }
+
+PeerAPSSID OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "Peer AP SSID name."
+       ::= { Info 3 }
+       
+APChannel OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "AP channel."
+       ::= { Info 4 }
+       
+RFType OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "RF Type."
+       ::= { Info 5 }
+       
+END

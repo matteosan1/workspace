@@ -1,0 +1,351 @@
+NERVOUS SYSTEM CONSTRUCTION KIT FOR IBM COMPATIBLES
+
+VERSION 2.0, 1-22-91
+
+>>>>FOR A COPY OF THE MOST RECENT VERSION OF THE PROGRAM AND TURBO-
+C/C++ SOURCE CODE (PLEASE SPECIFY DISK TYPE REQUIRED: 360KB, 1.2MB, OR 
+720KB), SEND $10.00 (U.S.$15.00 FOR DELIVERY OUTSIDE NORTH AMERICA); 
+REQUIRES EGA OR VGA; SOURCE CODE CAN BE COMPILED WITH BORLAND'S TURBO 
+C VERSION 2 OR TURBO C++ VERSION 1<<<<
+
+By Pat and Greg Williams, Rt. 1, Box 302, Gravel Switch, KY 40328, 
+606-332-7606. Based on the ideas of Randall D. Beer, Department of 
+Computer Engineering and Science, Case Western Reserve University, 
+Cleveland, Ohio, as found in his INTELLIGENCE AS ADAPTIVE BEHAVIOR: AN 
+EXPERIMENT IN COMPUTATIONAL NEUROETHOLOGY, Academic Press, 1990 (ISBN 
+0-12-084730-2; to order, you can phone A.P. toll-free at 1-800-321-
+5068). 
+
+READ THIS FIRST: These executable programs, source code files, and 
+associated documentation are supplied AS IS, WITHOUT WARRANTY. All 
+consequences of their use (or misuse) are solely the responsibilities 
+of the users, and in no case shall Pat Williams, Greg Williams, 
+Randall Beer, or Academic Press be liable for damages arising 
+therefrom. Modification of the source code is hereby permitted and 
+encouraged (we do hope you will share your additions and corrections 
+with us and with others). You may distribute copies of the original 
+distribution disk as you wish. 
+
+FILES ON DISK(S)
+
+EXECUTABLES AND AUXILIARY FILES (IN ROOT DIRECTORY):
+  EGAVGA.BGI - Borland graphics file used by NS87.EXE, NS.EXE, and 
+    NSPLAY.EXE (must be in default directory)
+  NS87.EXE - main program for computers with math coprocessors
+  NS.EXE - main program for computers without math coprocessors
+  NSPLAY.EXE - animation playback program
+  NSPRINT.EXE - utility program to print neuron parameters and 
+    connections
+  L3R3.NEU, EDGE3.NEU, APP3.NEU - sample neuron files
+  L3R3.ENV, EDGE3.ENV, APP3.ENV - sample environment files
+  SINCOS.TAB - data file used by NS.EXE (must be in default directory)
+  NS10.SAV - sample animation data file
+  
+SOURCE AND AUXILIARY FILES FOR COMPILING NS87.EXE (IN "87" DIRECTORY):
+  *.C - C SOURCE FILES
+  *.H - C HEADER FILES
+  NS87.PRJ - PROJECT FILE FOR TURBO C++
+  NS87.PJC - PROJECT FILE FOR TURBO C (MEDIUM MODEL)
+
+SOURCE AND AUXILIARY FILES FOR COMPILING NS.EXE (IN "NO87" DIRECTORY):
+  *.C - C SOURCE FILES
+  *.H - C HEADER FILES
+  NS.PRJ - PROJECT FILE FOR TURBO C++
+  NS.PRC - PROJECT FILE FOR TURBO C (MEDIUM MODEL)
+
+SOURCE AND AUXILIARY FILES FOR COMPILING NSPLAY.EXE (IN "PLAY" 
+  DIRECTORY):
+  *.C - C SOURCE FILES
+  *.H - C HEADER FILES
+  NSPLAY.PRJ - PROJECT FILE FOR TURBO C++
+  NSPLAY.PRC - PROJECT FILE FOR TURBO C (LARGE MODEL)
+
+SOURCE AND AUXILIARY FILES FOR COMPILING NSPRINT.EXE (IN "PRINT" 
+  DIRECTORY):
+  *.C - C SOURCE FILES
+  DEFN.H - C HEADER FILE (MEDIUM MODEL)
+
+I. INTRODUCTION
+
+When we came upon Dr. Beer's beautifully done book (a revision of his 
+1989 dissertation), we immediately decided to attempt a PC-replication 
+of his computer simulation of the real-time behavior of a simplified 
+cockroach. The simulation is the first we've seen which starts at the 
+level of (reasonably realistically modeled) individual neurons and 
+ends up with whole-organism behavior. Dr. Beer's hexapod bug walks 
+with various gaits, wanders, follows edges, moves toward "food" when 
+its "energy" supply is low, "eats," and manages to avoid conflicts 
+among its various types of behavior. As programmed by Dr. Beer, the 
+bug has about 80 neurons, with about 150 connections and about 500 
+user-settable parameters. The program allows arbitrary connection of 
+neurons (and, via modifications to the source code [Turbo C compiler 
+needed for this], arbitrary specification of organism and environment 
+models), making it a general "construction kit" for small artificial 
+neural networks. Note that these networks are NOT of the generalized 
+type beloved by "connectionism," but rather are designed to perform 
+specific functions within the context of an organism's ecological 
+niche. Psychological control theory enthusiasts should note that Dr. 
+Beer's bug's nervous system isn't organized as a Powersian 
+hierarchical control system (see William T. Powers, BEHAVIOR: THE 
+CONTROL OF PERCEPTION, Aldine, Chicago, 1973), but networks organized 
+in that way certainly can be constructed using the program. TO 
+UNDERSTAND THE PROGRAM, YOU WILL NEED TO READ (AT LEAST PARTS OF) 
+INTELLIGENCE AS ADAPTIVE BEHAVIOR.
+
+Suggestions, questions, modifications, etc., are welcome. Let us know 
+your thoughts about this stuff... down the road possibilities include 
+simulations of nematodes (having only a few hundred neurons in their 
+entire nervous system), Aplysia (modifiable synapses), spiders (prey-
+catching, web building?), and op-amp-circuit realization of neurons 
+(for speedier computations in parallel).
+
+We recommend INTELLIGENCE AS ADAPTIVE BEHAVIOR not only for its 
+development of the bug model, but for its extended critique of 
+traditional approaches in Artificial Intelligence. Here's the 
+foundation for a new field, folks: non-verbal AI. Thank you, Dr. Beer! 
+
+II. RUNNING THE PROGRAM
+
+The executable files are NS.EXE (if you don't have a math coprocessor) 
+and NS87.EXE (if you have a coprocessor). Results of simulations with 
+the two files are quite similar BUT NOT IDENTICAL, because of round-
+off and other differences between integer and long calculations in the 
+former and float and double calculations in the latter. Actually, you 
+can run either file on computers with or without coprocessors, but 
+NS.EXE runs about half as fast as NS87.EXE with a coprocessor, and 
+NS87.EXE runs about five times slower than NS.EXE without a 
+coprocessor.
+
+With one of the executable files (and the Borland graphics file 
+EGAVGA.BGI, included on the distribution disk) on the default drive, 
+at the DOS prompt, type NS or NS87, as appropriate, and press ENTER. 
+Within a short time, you should see a menu of eight possibilities, 
+each of which can be accessed by pressing the key corresponding to its 
+first letter. For example, to quit the program, press Q.
+
+There are two types of data files used by NS.EXE or NS87.EXE: neuron 
+files, which provide descriptions of particular nervous system 
+designs, and environment files, which provide descriptions of 
+particular environment ("world") configurations and initial 
+conditions. Three sets of neuron and environment files are included: 
+WANDER.NEU and WANDER.ENV, EDGE3.NEU and EDGE3.ENV, and APP3.NEU and 
+APP3.ENV. You can recall these files, and you can save and recall new 
+neuron and environment files. 
+
+To see the program in action, press R (for "Read files") and then, at 
+the prompt for a neuron file spec, key in WANDER.NEU and press ENTER. 
+At the prompt for an environment file spec, key in WANDER.ENV and 
+press ENTER. The current neuron and environment files appear at the 
+bottom of the menu screen. Now press S (for "Simulate"); you should 
+see an EGA-graphics-mode screen with a representation of a bug near 
+the lower left corner. To begin the simulation, press ENTER. The bug 
+will begin to move, and plots will be drawn at the right side of the 
+screen. Each of the plots except the bottom one shows the firing 
+frequency of a named neuron in the bug's nervous system (i.e., neuron 
+RBR) vs. (simulated, not real) time. The bottom plot shows the gait 
+pattern of the bug's legs -- a line means the foot is up (swing mode), 
+while no line means the foot is down (stance mode).
+
+As shown at the bottom of the simulation screen, you can press SPACE 
+to enter single-stepping mode; each time you subsequently press SPACE, 
+another point will appear on each plot (corresponding to an increment 
+of 0.010 seconds of simulated time; actually, this increment 
+corresponds to two "internal" integration intervals, each 0.005 
+simulated seconds long). To return to continuous simulation, press 
+ENTER.
+
+You can get back to the menu screen at any time by pressing Esc, but 
+don't do that just yet. First, note the "D:2" message at the bottom of 
+the screen. This means that the bug is being redrawn after every 
+second simulation step (that is, every 0.020 seconds of simulated 
+time). You can speed up the simulation a little by pressing D while in 
+the single-step mode, so that the message reads "D:4" (and the bug is 
+redrawn after every fourth simulation step, or every 0.040 seconds). 
+Subsequent presses of D result in redrawing of the bug every eighth 
+step, every 16th step, every 32nd step, every 64th step (giving a very 
+"jerky" bug, indeed!), and (back to) every second step. 
+
+Also, you can inject current into one of the bug's neurons, provided 
+that a variable of that neuron is being plotted. When in the single-
+step mode, type N=I and then press ENTER, where the number N 
+designates the position (1=top, 5=bottom) of the plot for the current-
+injected neuron and I designates the injected current in nanoamps 
+(between 0.1 and 99.9, positive or negative). The injected current is 
+shown at the bottom right of the screen. For example, to inject -15 
+nanoamps into neuron RBL (with its frequency plot in position 3), type 
+3=-15 and press ENTER. Then press SPACE for a single step or ENTER for 
+continuous simulation, with the current being injected.
+
+The number between the "D:2" message and (when present) the indication 
+of injected current is the current energy of the bug. The maximum 
+energy is 999 units; during simulation, the energy decreases by one 
+unit after every eight steps (that is, after every 0.080 seconds of 
+simulated time); when the energy reaches zero units, "RIP" appears and 
+the simulation stops.
+
+When the single-step mode is on, you can toggle (by pressing TAB) 
+between plots and a list of the names of the neurons (up to as many as 
+120) in the nervous system, color-coded according to their firing 
+frequency (normalized between 0 and 1). Try it. In the single-step 
+mode, press TAB, then press SPACE or ENTER to see the neuron names. 
+The colors of the names will change as the simulation runs, according 
+to the color key at the bottom right. (Names of neurons with firing 
+frequency = 0 are shown in the same color as the "0" in the key; names 
+of neurons with firing frequency between 0 and 1/3 are shown in the 
+same color as the block between "0" and "1/3" in the key; names of 
+neurons with firing frequency between 1/3 and 2/3 are shown in the 
+same color as the block between "1/3" and "2/3" in the key; and names 
+of neurons with firing frequency between 2/3 and 1 are shown in the 
+same color as the block between "2/3" and "1" in the key.
+
+When in the single-step mode, you can initiate recording of the 
+simulation by pressing a function key (F1 through F10). This causes an 
+animation data file to be written to disk as the simulation proceeds; 
+later, you can play back the simulation at higher speeds by using 
+NSPLAY.EXE. The animation data file is written to the default 
+directory unless you previously specified a recording path by pressing 
+"P" (for "Path specification for recording") while at the menu screen. 
+The name of the animation data file is "NSX.SAV" with X = 1, 2,..., or 
+10, corresponding to the number of the function key pressed to 
+initiate recording. Note that there is no warning given about 
+overwriting an old file by a new one with the same name! Also note 
+that disk errors are handled via DOS -- if you must "abort," then the 
+program will terminate and you will be back at the DOS prompt! Once 
+recording has been initiated, a message appears at the bottom of the 
+screen: "RECORDING=X" (with X = 1, 2,..., or 10). To quit recording at 
+any time, press Esc. Other keys work as usual during simulation.
+
+Now press Esc to return to the menu screen. Neuron and environment 
+files can be constructed, modified, and saved for later recall by 
+operations accessed via the menu.
+
+Press W (for "Write files"). You are asked whether you want to write a 
+neuron file. Press Y (for "Yes"). Press N (for "No") when asked 
+whether you want to use the file spec WANDER.NEU. Then, in response to 
+the query for a neuron file name, type in TEST.NEU (we recommend using 
+the NEU extension for all neuron files) and press ENTER. Press "Y" 
+when asked whether you want to write an environment file, press "N" 
+when asked if you want to use the file spec WANDER.ENV, and then type 
+in TEST.ENV (we recommend using the ENV extension for all environment 
+files) and press ENTER. Note that TEST.NEU and TEST.ENV are now the 
+current files, as shown at the bottom of the screen. You are going to 
+modify these files.
+
+Press N (for "Neuron modification"). When prompted for a neuron name, 
+press ? and then ENTER to see a listing of all neurons in the nervous 
+system specified by file TEST.NEU (which, at this point, is just a 
+duplicate of WANDER.NEU, with a different name). Now type LC (capital 
+letters, please; neuron names are case-sensitive) and press ENTER. 
+Near the top of the screen are several user-settable parameters for 
+neuron LC. Use the up and down arrow keys to move the cursor, then 
+type in new values. Move the cursor to the Gain value (1.00) and key 
+in 0.5, then press ENTER. Now the cursor is on the Intrinsic current 
+line; press ENTER to switch to NON-RANDOM, press ENTER again to 
+switch to RANDOM, and press ENTER a third time to switch back to NONE. 
+You see that there are three possibilities, or cases, for the 
+Intrinsic current. Each case is described in detail in Dr. Beer's 
+book. For the NON-RANDOM and RANDOM cases, you can specify several 
+parameter values. Sensory current function has seven cases, accessed 
+in turn by successively pressing ENTER. Similarly, Motor output type 
+has three cases. Now move the cursor to the Connections line and press 
+ENTER; a new screen appears, allowing specification of the neurons 
+which synapse on LC; synaptic connections can be DIRECT, or GATED or 
+MODULATED by a third neuron's synapse (see Dr. Beer's book for 
+details). Both direct and indirect current factors can be specified. 
+To delete a connection, move the cursor to the proper line and press 
+Control and D simultaneously. To return to the neuron parameters 
+screen, press Esc. You can alter the name of the neuron by editing the 
+top line (the "old" neuron is NOT deleted; this allows quick 
+duplication of neurons); you can delete the neuron by pressing Control 
+and D simultaneously. When you are done making modifications, press 
+Control and S simultaneously to save the modifications (otherwise they 
+will be lost!), then press Esc to return to the neuron name screen. At 
+the neuron name screen, you can key in another neuron name for 
+modification and press ENTER (remember, to see a list of all neurons, 
+press ? and then ENTER). And, by pressing Control and S 
+simultaneously, you can save the modified neuron file (you'll be 
+prompted for a file spec). Or you can press Esc to return to the menu 
+screen. Up to 200 neurons can be specified in a neuron file for use in 
+NS87.EXE; up to 150 neurons can be specified
+
+At the menu screen, press E (for "Environment specification") to enter 
+the number of food patches, the coordinates of the centers of the food 
+patches, the sizes (in energy units) of the food patches, the number 
+of obstacle blocks, and the coordinates of the upper left corners of 
+the blocks. Press Esc before answering the final prompt to stop the 
+succession of prompts (retaining parameter values specified to that 
+point). 
+
+At the menu screen, press I (for "Initialize conditions" -- although 
+this can be done in the middle of a simulation, if you want) to enter 
+the coordinates of the bug, the angle of the bug, and the energy of 
+the bug. Press Esc to stop the succession of prompts (retaining 
+parameter values specified to that point).
+
+At the menu screen, press G (for "Graph specification") to set up the 
+plotted graphs (1=top through 5=bottom) at the right of the simulation 
+screen. You are prompted for the type (none, neuron variable, or gait 
+pattern) for each graph number. If you choose to plot a neuron 
+variable, then you are prompted for neuron name and variable type 
+(voltage, frequency, or current); if you choose to plot voltage or 
+current, you are prompted for the axis scale (in millivolts or 
+picoamps, respectively). Press Esc to stop the succession of prompts 
+(retaining parameter values specified to that point).
+
+At the menu screen, press W (for "Write files") to save neuron and/or 
+environment files with the current parameter values.
+
+III. SIMULATION FILES
+
+The three sets of ready-to-run simulation files included with the 
+program can be modified as desired.
+
+WANDER.NEU and WANDER.ENV: Wandering controller neural circuits only.
+
+EDGE3.NEU and EDGE3.ENV: Wandering controller and edge-following 
+neural circuits only; obstacle blocks.
+
+APP3.NEU and APP3.ENV: Wandering controller, edge-following, 
+appetitive, and consummatory neural circuits; obstacle blocks and food 
+patch.
+
+IV. ANIMATION PLAYBACK PROGRAM
+
+The program NSPLAY.EXE runs animation data files previously written 
+during simulations. Animation playback speeds can be much higher than 
+the speed of the original simulation in NS.EXE or NS87.EXE (for 
+example, faster than real-time on our 16MHz 386SX with no math 
+coprocessor). At the DOS prompt, with NSPLAY.EXE in the current 
+directory, type:
+
+  NSPLAY [PATH, IF NECESSARY]NSX.SAV
+
+(where X = 1, 2,..., or 3, corresponding to an existing animation data 
+file) and press ENTER.
+
+The distribution disk includes the sample animation data file 
+NS10.SAV; with both NSPLAY.EXE and NS10.SAV in the default directory, 
+type:
+
+  NSPLAY NS10.SAV
+
+and press ENTER. Assuming that sufficient memory is available, the 
+animation file is read (use a RAM disk for highest speed!) and the 
+simulation screen appears. Press ENTER to begin the animation at the 
+highest possible speed. Press SPACE to single-step. In single-step 
+mode, press - (repeatedly if desired) to slow the animation; press + 
+(repeatedly if desired) to speed it up. When the recorded simulation 
+is complete, the animation file is read again and the process repeats. 
+Press Esc at any time to return to DOS. 
+
+V. NEURON PRINT PROGRAM
+
+NSPRINT.EXE prints out a listing of all the neurons (with parameters 
+and connections) in any neuron file. To run this utility, at the DOS 
+prompt type: 
+
+  NSPRINT filename
+
+and press ENTER. The filename includes the drive, path, and extension 
+if necessary. For example, you might type NSPRINT C:WANDER.NEU, then 
+press ENTER. Then follow instructions given by the program.

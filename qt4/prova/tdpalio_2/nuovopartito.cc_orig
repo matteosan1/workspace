@@ -1,0 +1,167 @@
+#include "nuovopartito.h"
+#include "resource.h"
+
+#include <commctrl.h>
+
+NuovoPartito::NuovoPartito(int z1, int z2, Barbero b, string* c1, string* c2) {
+
+    for(int i=0; i<9; i++)
+        contrade1[i+1] = c1[i];
+
+    contrade2[0] = "--------";
+    for(int i=0; i<16; i++)
+        contrade2[i+1] = c2[i];
+
+
+    tipi[0] = "Blocca Contrada";
+    tipi[1] = "Stai dietro";
+    tipi[2] = "Aiuto economico";
+    tipi[3] = "Salva";
+    tipi[4] = "Rincorsa";
+    tipi[5] = "Scambio Posto";
+    chi1 = z1;
+    chi2 = z2;
+}
+
+NuovoPartito::~NuovoPartito()
+{}
+
+BOOL CALLBACK NuovoPartito::DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
+{
+    HWND hEdit;
+    char b[255];
+    string s;
+    switch (Message)
+    {
+        case WM_COMMAND:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                if (LOWORD(wParam) == IDOK) {
+                    OnExit();
+                    EndDialog(hwnd, IDOK);
+                }
+                if (LOWORD(wParam) == IDCANCEL)
+                    EndDialog(hwnd, IDCANCEL);
+            }
+            return true;
+        case WM_INITDIALOG:
+            hwndCtl = hwnd;
+            InitDlg();
+            return true;
+        default:
+            return false;
+	}
+}
+
+void NuovoPartito::InitDlg() {
+
+    HWND hEdit;
+
+    SendDlgItemMessage(hwndCtl, IDC_TIPO, CB_RESETCONTENT, 0, 0);
+    hEdit = GetDlgItem(hwndCtl, IDC_TIPO);
+    for(int j=0; j<6; j++) {
+        SendDlgItemMessage(hwndCtl, IDC_TIPO, CB_ADDSTRING, 0, (LPARAM) tipi[j].c_str());
+        SendDlgItemMessage(hwndCtl, IDC_TIPO, CB_SETCURSEL, 0, 0);
+    }
+
+    SendDlgItemMessage(hwndCtl, IDC_CONTRADA_1, CB_RESETCONTENT, 0, 0);
+    hEdit = GetDlgItem(hwndCtl, IDC_CONTRADA_1);
+    for(int j=0; j<17; j++) {
+        SendDlgItemMessage(hwndCtl, IDC_CONTRADA_1, CB_ADDSTRING, 0, (LPARAM) contrade1[j].c_str());
+        SendDlgItemMessage(hwndCtl, IDC_CONTRADA_1, CB_SETCURSEL, 0, 0);
+    }
+
+    SendDlgItemMessage(hwndCtl, IDC_CONTRADA_2, CB_RESETCONTENT, 0, 0);
+    hEdit = GetDlgItem(hwndCtl, IDC_CONTRADA_2);
+    for(int j=0; j<10; j++) {
+        SendDlgItemMessage(hwndCtl, IDC_CONTRADA_2, CB_ADDSTRING, 0, (LPARAM) contrade2[j].c_str());
+        SendDlgItemMessage(hwndCtl, IDC_CONTRADA_2, CB_SETCURSEL, 0, 0);
+    }
+
+    hEdit = GetDlgItem(hwndCtl, IDC_SPIN_SOLDI);
+    SendMessage(hEdit, UDM_SETRANGE, 0, (LPARAM) MAKELONG(500, 0));
+
+    TCHAR* labels[] = {"Contrada", "Servizio", "Costo"};
+    int width[] = {150, 60, 70, 60, 140, 115};
+
+    hEdit = GetDlgItem(hwndCtl, IDC_LISTA_PARTITI);
+//    SendMessage(hEdit, 0, 0, 0);
+
+    LV_COLUMN listCol;
+    memset(&listCol, 0, sizeof(LV_COLUMN));
+
+    listCol.mask = LVCF_TEXT|LVCF_WIDTH|LVCF_SUBITEM|LVCF_FMT;
+    listCol.pszText = "";
+    listCol.fmt = LVCFMT_LEFT;
+    for (int i = 0; i<3; i++)
+    {
+        listCol.pszText = labels[i];
+        listCol.cx = width[i];
+        if (i == 2)
+            listCol.fmt = LVCFMT_CENTER;
+        SendMessage(hEdit, LVM_INSERTCOLUMN, i, (LPARAM)&listCol);
+    }
+    FillList();
+}
+
+void NuovoPartito::FillList() {
+
+    SendDlgItemMessage(hwndCtl, IDC_LISTA_PARTITI, LVM_DELETEALLITEMS, 0, 0);
+    HWND hEdit;
+
+    char* b;
+    int num = 0;
+    for (int i = 0; i < barbero.nPartiti(); i++) {
+
+        Partito p = barbero.partito(i);
+
+        LV_ITEM lit;
+        memset(&lit, 0, sizeof(LV_ITEM));
+        lit.mask = LVIF_TEXT;
+        lit.cchTextMax = 100;
+        lit.iItem = num;
+
+        string s = contrade1[p.getContrada()];
+        lit.pszText = (CHAR*)s.c_str();
+        SendDlgItemMessage(hwndCtl, IDC_LISTA_PARTITI, LVM_SETITEMSTATE, num, (LPARAM)&lit);
+        SendDlgItemMessage(hwndCtl, IDC_LISTA_PARTITI, LVM_INSERTITEM, num, (LPARAM)&lit);
+
+        for(int j=1; j<3; j++) {
+            lit.iSubItem = j;
+            if (j == 2) {
+                char c[4];
+                sprintf(c, "%d", p.getPremio());
+                lit.pszText = c;
+            }
+            if (j == 1) {
+                s = tipi[p.getTipo()];
+                if (p.getTipo() == 0)
+                    s = s + " " + contrade2[p.getFermata()];
+                lit.pszText = (CHAR*)s.c_str();
+            }
+
+            SendDlgItemMessage(hwndCtl, IDC_LISTA_PARTITI, LVM_SETITEM, num, (LPARAM)&lit);
+        }
+        num++;
+    }
+}
+
+void NuovoPartito::OnExit() {
+
+    HWND hEdit;
+    int indice;
+    hEdit = GetDlgItem(hwndCtl, IDC_CONTRADA_1);
+    indice = SendMessage(hEdit, CB_GETCURSEL, 0, 0);
+
+    if (indice >= chi1)
+        indice++;
+
+    if (1) {    // se enabled
+
+        hEdit = GetDlgItem(hwndCtl, IDC_CONTRADA_2);
+        indice = SendMessage(hEdit, CB_GETCURSEL, 0, 0) + 1;
+
+        if (indice >= chi2)
+            indice++;
+    }
+
+}

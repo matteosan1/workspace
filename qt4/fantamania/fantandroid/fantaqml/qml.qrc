@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+    	<file>main.qml</file>
+	<file>MainForm.ui.qml</file>
+	<file>MyButton.qml</file>
+	<file>Roster.qml</file>
+	<file>button_up.png</file>
+	<file>button_down.png</file>
+	<file>test.qml</file>
+    </qresource>
+</RCC>

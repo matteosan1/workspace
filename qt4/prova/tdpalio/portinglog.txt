@@ -1,0 +1,379 @@
+Log for qt3to4 on Fri Oct 12 20:24:31 2007. Number of log entries: 354
+No changes made to file /media/sda2/prova/tdpalio/barbero.cc
+No changes made to file /media/sda2/prova/tdpalio/barbero.h
+No changes made to file /media/sda2/prova/tdpalio/barbero.o
+No changes made to file /media/sda2/prova/tdpalio/cavallo.cc
+No changes made to file /media/sda2/prova/tdpalio/cavallo.h
+No changes made to file /media/sda2/prova/tdpalio/cavallo.o
+No changes made to file /media/sda2/prova/tdpalio/contrada.cc
+No changes made to file /media/sda2/prova/tdpalio/contrada.h
+No changes made to file /media/sda2/prova/tdpalio/contrada.o
+No changes made to file /media/sda2/prova/tdpalio/Doxyfile
+No changes made to file /media/sda2/prova/tdpalio/fantino.cc
+No changes made to file /media/sda2/prova/tdpalio/fantino.h
+No changes made to file /media/sda2/prova/tdpalio/fantino.o
+No changes made to file /media/sda2/prova/tdpalio/giocatore.cc
+No changes made to file /media/sda2/prova/tdpalio/giocatore.h
+No changes made to file /media/sda2/prova/tdpalio/giocatore.o
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 7 column 22: qtextbrowser.h -> q3textbrowser.h
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 12 column 40: WGroupLeader -> Qt::WGroupLeader
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 12 column 60: WDestructiveClose -> Qt::WDestructiveClose
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 14 column 34: QTextBrowser -> Q3TextBrowser
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 19 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 19 column 45: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 20 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/helpbrowser.cc at line 20 column 47: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/helpbrowser.cc: Added the following include directives:
+	#include <Q3VBoxLayout> 	#include <Q3HBoxLayout> 
+In file /media/sda2/prova/tdpalio/helpbrowser.h at line 7 column 18: QTextBrowser -> Q3TextBrowser
+In file /media/sda2/prova/tdpalio/helpbrowser.h at line 17 column 15: QTextBrowser -> Q3TextBrowser
+No changes made to file /media/sda2/prova/tdpalio/helpbrowser.o
+In file /media/sda2/prova/tdpalio/imageitem.cpp at line 16 column 39: QCanvas -> Q3Canvas
+In file /media/sda2/prova/tdpalio/imageitem.cpp at line 17 column 19: QCanvasRectangle -> Q3CanvasRectangle
+In file /media/sda2/prova/tdpalio/imageitem.cpp: Added the following include directives:
+	#include <QPixmap> 
+In file /media/sda2/prova/tdpalio/imageitem.h at line 15 column 17: qcanvas.h -> q3canvas.h
+In file /media/sda2/prova/tdpalio/imageitem.h at line 20 column 41: QCanvasRectangle -> Q3CanvasRectangle
+In file /media/sda2/prova/tdpalio/imageitem.h at line 22 column 30: QCanvas -> Q3Canvas
+No changes made to file /media/sda2/prova/tdpalio/imageitem.o
+No changes made to file /media/sda2/prova/tdpalio/ingaggiofantino.cc_orig
+No changes made to file /media/sda2/prova/tdpalio/ingaggiofantino.h_orig
+No changes made to file /media/sda2/prova/tdpalio/main.cpp
+No changes made to file /media/sda2/prova/tdpalio/main.o
+No changes made to file /media/sda2/prova/tdpalio/Makefile
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 18 column 17: qheader.h -> q3header.h
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 19 column 19: qlistview.h -> q3listview.h
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 22 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 29 column 75: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 36 column 37: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 39 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 41 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 43 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 47 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 72 column 32: QListView -> Q3ListView
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 77 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 113 column 17: QListViewItem -> Q3ListViewItem
+In file /media/sda2/prova/tdpalio/messaggio.cpp at line 113 column 44: QListViewItem -> Q3ListViewItem
+In file /media/sda2/prova/tdpalio/messaggio.cpp: Added the following include directives:
+	#include <Q3HBoxLayout> 	#include <Q3VBoxLayout> 
+In file /media/sda2/prova/tdpalio/messaggio.h at line 21 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 22 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 23 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 27 column 15: QListView -> Q3ListView
+In file /media/sda2/prova/tdpalio/messaggio.h at line 28 column 19: QListViewItem -> Q3ListViewItem
+In file /media/sda2/prova/tdpalio/messaggio.h at line 35 column 84: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/messaggio.h at line 41 column 13: QListView -> Q3ListView
+In file /media/sda2/prova/tdpalio/messaggio.h at line 48 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 49 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 50 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 51 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 54 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h at line 55 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/messaggio.h: Added the following include directives:
+	#include <Q3VBoxLayout> 	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 	#include <QLabel> 
+No changes made to file /media/sda2/prova/tdpalio/messaggio.o
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 68 column 56: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 109 column 64: AlignCenter -> Qt::AlignCenter
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 125 column 64: AlignCenter -> Qt::AlignCenter
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 146 column 56: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 199 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/messaggio.ui at line 224 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/messaggio.ui.h at line 20 column 44: QCheckListItem -> Q3CheckListItem
+In file /media/sda2/prova/tdpalio/messaggio.ui.h at line 22 column 43: QListViewItem -> Q3ListViewItem
+No changes made to file /media/sda2/prova/tdpalio/moc_helpbrowser.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_helpbrowser.o
+No changes made to file /media/sda2/prova/tdpalio/moc_messaggio.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_messaggio.o
+No changes made to file /media/sda2/prova/tdpalio/moc_nuovogiocatore.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_nuovogiocatore.o
+No changes made to file /media/sda2/prova/tdpalio/moc_sceltapartto.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_sceltapartto.o
+No changes made to file /media/sda2/prova/tdpalio/moc_strategiaprove.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_strategiaprove.o
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp at line 56 column 43: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp at line 159 column 22: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp at line 194 column 19: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp at line 201 column 22: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp at line 207 column 22: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/moc_tdpalio.cpp: Added the following include directives:
+	#include <QCloseEvent> 
+No changes made to file /media/sda2/prova/tdpalio/moc_tdpalio.o
+No changes made to file /media/sda2/prova/tdpalio/moc_tratta.cpp
+No changes made to file /media/sda2/prova/tdpalio/moc_tratta.o
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 24 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 28 column 85: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 33 column 42: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 35 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 37 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 39 column 29: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 60 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp at line 72 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.cpp: Added the following include directives:
+	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 	#include <Q3VBoxLayout> 
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 23 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 24 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 25 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 38 column 89: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 59 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 60 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 62 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 64 column 15: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 65 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h at line 66 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/nuovogiocatore.h: Added the following include directives:
+	#include <Q3VBoxLayout> 	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 	#include <QLabel> 
+No changes made to file /media/sda2/prova/tdpalio/nuovogiocatore.o
+In file /media/sda2/prova/tdpalio/nuovogiocatore.ui at line 79 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/nuovogiocatore.ui at line 121 column 38: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/nuovogiocatore.ui at line 146 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/nuovogiocatore.ui at line 171 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/nuovogiocatore.ui at line 196 column 48: Horizontal -> Qt::Horizontal
+No changes made to file /media/sda2/prova/tdpalio/nuovogiocatore.ui.h
+No changes made to file /media/sda2/prova/tdpalio/nuovopartito.cc_orig
+No changes made to file /media/sda2/prova/tdpalio/nuovopartito.h_orig
+No changes made to file /media/sda2/prova/tdpalio/offertafantino.cc_orig
+No changes made to file /media/sda2/prova/tdpalio/offertafantino.h_orig
+No changes made to file /media/sda2/prova/tdpalio/palio.cc_orig
+No changes made to file /media/sda2/prova/tdpalio/palio.h_orig
+No changes made to file /media/sda2/prova/tdpalio/partito.cc
+No changes made to file /media/sda2/prova/tdpalio/partito.h
+No changes made to file /media/sda2/prova/tdpalio/partito.o
+No changes made to file /media/sda2/prova/tdpalio/resource.rc
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 20 column 22: qbuttongroup.h -> q3buttongroup.h
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 24 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 28 column 83: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 33 column 41: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 35 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 37 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 49 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 51 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 77 column 35: QButtonGroup -> Q3ButtonGroup
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp at line 97 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.cpp: Added the following include directives:
+	#include <Q3HBoxLayout> 	#include <Q3VBoxLayout> 
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 21 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 22 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 23 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 28 column 18: QButtonGroup -> Q3ButtonGroup
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 37 column 88: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 45 column 16: QButtonGroup -> Q3ButtonGroup
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 63 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 64 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 67 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 70 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 72 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h at line 76 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/sceltapartto.h: Added the following include directives:
+	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 	#include <Q3VBoxLayout> 	#include <QLabel> 
+No changes made to file /media/sda2/prova/tdpalio/sceltapartto.o
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 43 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 68 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 87 column 38: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 120 column 54: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 150 column 54: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 189 column 54: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 208 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 302 column 38: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 327 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 352 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/sceltapartto.ui at line 377 column 48: Horizontal -> Qt::Horizontal
+No changes made to file /media/sda2/prova/tdpalio/sceltapartto.ui.h
+No changes made to file /media/sda2/prova/tdpalio/setup.dat
+No changes made to file /media/sda2/prova/tdpalio/setup.dat_orig
+No changes made to file /media/sda2/prova/tdpalio/strategiaprove.cc_orig
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 19 column 19: qgroupbox.h -> q3groupbox.h
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 23 column 22: qprogressbar.h -> q3progressbar.h
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 26 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 30 column 85: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 35 column 42: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 37 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 47 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 49 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 51 column 30: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 55 column 38: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 58 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 60 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 71 column 30: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 87 column 32: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 91 column 40: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 94 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 96 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 107 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 109 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 124 column 32: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 128 column 40: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 131 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 133 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 144 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 146 column 30: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 164 column 30: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 166 column 28: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 170 column 36: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 173 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 175 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 196 column 29: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 224 column 31: QProgressBar -> Q3ProgressBar
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp at line 231 column 31: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.cpp: Added the following include directives:
+	#include <Q3HBoxLayout> 	#include <Q3GridLayout> 	#include <Q3VBoxLayout> 
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 22 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 23 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 24 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 27 column 15: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 31 column 18: QProgressBar -> Q3ProgressBar
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 39 column 89: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 44 column 13: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 49 column 13: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 54 column 13: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 59 column 13: QGroupBox -> Q3GroupBox
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 73 column 16: QProgressBar -> Q3ProgressBar
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 84 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 85 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 86 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 88 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 89 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 90 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 91 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 92 column 15: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 94 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 95 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 96 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 97 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 98 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 100 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 101 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 102 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 103 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 104 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 106 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 109 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 110 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 111 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 112 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h at line 113 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/strategiaprove.h: Added the following include directives:
+	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 	#include <Q3VBoxLayout> 	#include <QLabel> 
+No changes made to file /media/sda2/prova/tdpalio/strategiaprove.h_orig
+No changes made to file /media/sda2/prova/tdpalio/strategiaprove.o
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 38 column 40: AlignCenter -> Qt::AlignCenter
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 49 column 40: AlignCenter -> Qt::AlignCenter
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 142 column 80: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 229 column 88: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 331 column 88: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 371 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 517 column 54: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 547 column 54: Vertical -> Qt::Vertical
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 576 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 601 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui at line 626 column 48: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/strategiaprove.ui.h: Added the following include directives:
+	#include <QPixmap> 
+No changes made to file /media/sda2/prova/tdpalio/tdpalio
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 15 column 16: qframe.h -> q3frame.h
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 20 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 23 column 20: qpopupmenu.h -> q3popupmenu.h
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 24 column 18: qtoolbar.h -> q3toolbar.h
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 406 column 59: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 407 column 17: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 427 column 35: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 429 column 29: QFrame -> Q3Frame
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 430 column 39: QFrame -> Q3Frame
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 431 column 40: QFrame -> Q3Frame
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 443 column 39: QIconSet -> QIcon
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 445 column 40: QIconSet -> QIcon
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 447 column 40: QIconSet -> QIcon
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 450 column 41: QIconSet -> QIcon
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 461 column 26: QToolBar -> Q3ToolBar
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 467 column 26: QToolBar -> Q3ToolBar
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 471 column 37: QIconSet -> QIcon
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 478 column 29: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 489 column 29: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 493 column 28: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.cpp at line 497 column 26: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.cpp: Added the following include directives:
+	#include <Q3VBoxLayout> 
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 16 column 17: qcanvas.h -> q3canvas.h
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 34 column 11: QCanvas -> Q3Canvas
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 34 column 33: QCanvas -> Q3Canvas
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 38 column 15: QCanvasView -> Q3CanvasView
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 38 column 37: QCanvasView -> Q3CanvasView
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 40 column 37: QScrollView -> Q3ScrollView
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp at line 41 column 37: QScrollView -> Q3ScrollView
+In file /media/sda2/prova/tdpalio/tdpalio_estrazione.cpp: Added the following include directives:
+	#include <QPixmap> 
+No changes made to file /media/sda2/prova/tdpalio/tdpalio_estrazione.o
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 24 column 21: qmainwindow.h -> q3mainwindow.h
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 32 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 33 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 34 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 37 column 18: QActionGroup -> Q3ActionGroup
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 38 column 14: QToolBar -> Q3ToolBar
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 39 column 16: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 40 column 12: QFrame -> Q3Frame
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 45 column 34: QMainWindow -> Q3MainWindow
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 50 column 62: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 50 column 82: WType_TopLevel -> Qt::WType_TopLevel
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 53 column 10: QFrame -> Q3Frame
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 57 column 14: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 58 column 14: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 59 column 14: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 60 column 14: QPopupMenu -> Q3PopupMenu
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 61 column 12: QToolBar -> Q3ToolBar
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 62 column 12: QToolBar -> Q3ToolBar
+In file /media/sda2/prova/tdpalio/tdpalio.h at line 112 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tdpalio.h: Added the following include directives:
+	#include <Q3HBoxLayout> 	#include <QCloseEvent> 	#include <Q3GridLayout> 	#include <Q3Frame> 	#include <QLabel> 	#include <Q3PopupMenu> 	#include <Q3VBoxLayout> 	#include <Q3ActionGroup> 
+In file /media/sda2/prova/tdpalio/tdpalio.kdevelop at line 135 column 27: Vertical -> Qt::Vertical
+No changes made to file /media/sda2/prova/tdpalio/tdpalio.kdevses
+No changes made to file /media/sda2/prova/tdpalio/tdpalio.o
+No changes made to file /media/sda2/prova/tdpalio/tdpalio_prove.cpp
+In file /media/sda2/prova/tdpalio/tdpalio_tratta.cpp at line 14 column 17: qcanvas.h -> q3canvas.h
+No changes made to file /media/sda2/prova/tdpalio/TRandom.cc
+No changes made to file /media/sda2/prova/tdpalio/utility.cc
+In file /media/sda2/prova/tdpalio/tdpalio.ui.h at line 21 column 21: qfiledialog.h -> q3filedialog.h
+In file /media/sda2/prova/tdpalio/tdpalio.ui.h at line 226 column 34: QFileDialog -> Q3FileDialog
+In file /media/sda2/prova/tdpalio/tdpalio.ui.h at line 287 column 34: QFileDialog -> Q3FileDialog
+In file /media/sda2/prova/tdpalio/tdpalio.ui.h: Added the following include directives:
+	#include <QCloseEvent> 
+No changes made to file /media/sda2/prova/tdpalio/TRandom.h
+In file /media/sda2/prova/tdpalio/tratta.ui.h at line 30 column 47: QCheckTableItem -> Q3CheckTableItem
+No changes made to file /media/sda2/prova/tdpalio/utility.h
+In file tdpalio.pro: Added entry QT +=  qt3support 
+In file tdpalio.pro: Added entry CONFIG += uic3
+
+In file tdpalio.pro: Renamed INTERFACES to FORMS3
+No changes made to file /media/sda2/prova/tdpalio/tdpalio_prove.o
+No changes made to file /media/sda2/prova/tdpalio/tdpalio_tratta.o
+In file /media/sda2/prova/tdpalio/tdpalio.ui at line 58 column 36: AlignCenter -> Qt::AlignCenter
+In file /media/sda2/prova/tdpalio/tdpalio.ui: Added the following include directives:
+	#include <QCloseEvent> 
+No changes made to file /media/sda2/prova/tdpalio/to_do_list
+No changes made to file /media/sda2/prova/tdpalio/TRandom.o
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 16 column 16: qtable.h -> q3table.h
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 20 column 20: qwhatsthis.h -> q3whatsthis.h
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 27 column 69: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 32 column 34: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 34 column 28: QTable -> Q3Table
+In file /media/sda2/prova/tdpalio/tratta.cpp at line 49 column 29: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.cpp: Added the following include directives:
+	#include <Q3VBoxLayout> 	#include <Q3HBoxLayout> 
+In file /media/sda2/prova/tdpalio/tratta.h at line 20 column 17: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.h at line 21 column 17: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.h at line 22 column 17: QGridLayout -> Q3GridLayout
+In file /media/sda2/prova/tdpalio/tratta.h at line 24 column 12: QTable -> Q3Table
+In file /media/sda2/prova/tdpalio/tratta.h at line 32 column 81: WFlags -> Qt::WFlags
+In file /media/sda2/prova/tdpalio/tratta.h at line 35 column 10: QTable -> Q3Table
+In file /media/sda2/prova/tdpalio/tratta.h at line 46 column 15: QVBoxLayout -> Q3VBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.h at line 47 column 15: QHBoxLayout -> Q3HBoxLayout
+In file /media/sda2/prova/tdpalio/tratta.h: Added the following include directives:
+	#include <Q3VBoxLayout> 	#include <Q3GridLayout> 	#include <Q3HBoxLayout> 
+No changes made to file /media/sda2/prova/tdpalio/tratta.o
+In file /media/sda2/prova/tdpalio/tratta.ui at line 86 column 40: Horizontal -> Qt::Horizontal
+In file /media/sda2/prova/tdpalio/tratta.ui at line 114 column 40: Horizontal -> Qt::Horizontal
+No changes made to file /media/sda2/prova/tdpalio/utility.cc~
+No changes made to file /media/sda2/prova/tdpalio/utility.h~
+No changes made to file /media/sda2/prova/tdpalio/utility.o
+
+Log for qt3to4 on Sat Oct 13 01:15:07 2007. Number of log entries: 1
+No changes made to file /media/sda2/prova/tdpalio/tdpalio.ui
+

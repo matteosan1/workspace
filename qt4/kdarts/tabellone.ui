@@ -1,0 +1,58 @@
+<ui version="4.0" >
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>357</width>
+    <height>234</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QVBoxLayout" >
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber" >
+       <property name="frameShadow" >
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth" >
+        <number>0</number>
+       </property>
+       <property name="numDigits" >
+        <number>3</number>
+       </property>
+       <property name="segmentStyle" >
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="intValue" stdset="0" >
+        <number>501</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label" >
+       <property name="font" >
+        <font>
+         <pointsize>34</pointsize>
+        </font>
+       </property>
+       <property name="text" >
+        <string>Florentina</string>
+       </property>
+       <property name="alignment" >
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,16 @@
+0.0.0.0         192.168.10.1    0.0.0.0         UG    600    0        0 wlp2s0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlp2s0
+192.168.10.0    0.0.0.0         255.255.255.0   U     600    0        0 wlp2s0
+
+
+
+default via 192.168.10.1 dev wlp2s0  proto static  metric 600                     
+169.254.0.0/16 dev wlp2s0  scope link  metric 1000 
+192.168.10.0/24 dev wlp2s0  proto kernel  scope link  src 192.168.10.227  metric 600
+
+1- aggiungere static route (fatto)
+2- customizzare la route per la WTU
+3- si puo` cambiare rete senza riavvio ?
+4- chiedere accesso a codice di bordo
+5- chiedere accesso a codice GPS
+6- scrivere la mail al tizio cosi` appena si riceve l'indirizzo siamo a posto

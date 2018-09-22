@@ -1,0 +1,56 @@
+# Project: tdpalio
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = tdpalio_private.res
+OBJ  = main.o Giocatore.o Gioco.o tdpalio.o Contrada.o Fantino.o Cavallo.o Corsa.o accoppiata.o $(RES)
+LINKOBJ  = main.o Giocatore.o Gioco.o tdpalio.o Contrada.o Fantino.o Cavallo.o Corsa.o accoppiata.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++"  -I"C:/Dev-Cpp/include/c++/mingw32"  -I"C:/Dev-Cpp/include/c++/backward"  -I"C:/Dev-Cpp/include" 
+BIN  = tdpalio.exe
+CXXFLAGS = $(CXXINCS)  -g3
+CFLAGS = $(INCS)  -g3
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before tdpalio.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "tdpalio.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Giocatore.o: Giocatore.cpp
+	$(CPP) -c Giocatore.cpp -o Giocatore.o $(CXXFLAGS)
+
+Gioco.o: Gioco.cpp
+	$(CPP) -c Gioco.cpp -o Gioco.o $(CXXFLAGS)
+
+tdpalio.o: tdpalio.cpp
+	$(CPP) -c tdpalio.cpp -o tdpalio.o $(CXXFLAGS)
+
+Contrada.o: Contrada.cpp
+	$(CPP) -c Contrada.cpp -o Contrada.o $(CXXFLAGS)
+
+Fantino.o: Fantino.cpp
+	$(CPP) -c Fantino.cpp -o Fantino.o $(CXXFLAGS)
+
+Cavallo.o: Cavallo.cpp
+	$(CPP) -c Cavallo.cpp -o Cavallo.o $(CXXFLAGS)
+
+Corsa.o: Corsa.cpp
+	$(CPP) -c Corsa.cpp -o Corsa.o $(CXXFLAGS)
+
+accoppiata.o: accoppiata.cpp
+	$(CPP) -c accoppiata.cpp -o accoppiata.o $(CXXFLAGS)
+
+tdpalio_private.res: tdpalio_private.rc 
+	$(WINDRES) -i tdpalio_private.rc -I rc -o tdpalio_private.res -O coff 

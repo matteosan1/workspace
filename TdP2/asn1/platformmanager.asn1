@@ -1,0 +1,14 @@
+PLATOFORMMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER;
+
+    --/status/platformmanager/platformstatus
+    ASN1-PlatformStatus ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        fence1      BOOLEAN,
+        fence2      BOOLEAN,
+        pcs         BOOLEAN,
+        ...
+    }
+
+END

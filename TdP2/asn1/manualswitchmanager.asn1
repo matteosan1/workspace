@@ -1,0 +1,26 @@
+MANUALSWITCHMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER;
+
+    ASN1-SwitchStatusEnum ::= ENUMERATED {
+        error(-1),
+        fly(0),
+        flyLever(1),
+        left(2),
+        leftLocked(3),
+        leftLever(4),
+        leftLockedLever(5),
+        right(6),
+        rightLocked(7),
+        rightLever(8),
+        rightLockedLever(9)
+    }
+
+    --/state/manualswitchmanager/switchmoved
+    ASN1-SwitchMoved ::= SEQUENCE {
+        messageHeader   ASN1-MessageHeader,
+        switchId        INTEGER,
+        switchStatus    ASN1-SwitchStatusEnum,
+        ...
+    }
+END

@@ -1,0 +1,79 @@
+/Doxyfile/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/Makefile/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/TRandom.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/TRandom.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/barbero.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/barbero.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/cavallo.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/cavallo.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/contrada.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/contrada.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/fantino.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/fantino.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/giocatore.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/giocatore.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/helpbrowser.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/helpbrowser.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/imageitem.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/imageitem.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/ingaggiofantino.cc_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/ingaggiofantino.h_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/main.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/messaggio.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/messaggio.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/messaggio.ui/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_helpbrowser.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_messaggio.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_nuovogiocatore.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_strategiaprove.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_tdpalio.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/moc_tratta.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovogiocatore.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovogiocatore.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovogiocatore.ui/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovopartito.cc_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovopartito.h_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/offertafantino.cc_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/offertafantino.h_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/palio.cc_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/palio.h_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/partito.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/partito.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/setup.dat/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/setup.dat_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.cc_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.h_orig/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.ui/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.kdevelop/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.kdevelop.pcs/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.kdevses/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.pro/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio.ui/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio_estrazione.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio_prove.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tdpalio_tratta.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/to_do_list/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tratta.cpp/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tratta.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/tratta.ui/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/utility.cc/1.1.1.1/Sat Jun 23 12:51:06 2007//
+/utility.h/1.1.1.1/Sat Jun 23 12:51:06 2007//
+D/doc////
+D/pictures////
+D/sound////
+/tdpalio.ui.h/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/messaggio.ui.h/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/strategiaprove.ui.h/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/sceltapartito.ui/0/Initial sceltapartito.ui//
+/sceltapartito.cpp/0/Initial sceltapartito.cpp//
+/sceltapartito.h/0/Initial sceltapartito.h//
+/tratta.ui.h/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/nuovogiocatore.ui.h/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/resource.rc/-1.1.1.1/Sat Jun 23 12:51:06 2007//
+/CheckDelegate.h/0/Initial CheckDelegate.h//
+/CheckDelegate.cc/0/Initial CheckDelegate.cc//

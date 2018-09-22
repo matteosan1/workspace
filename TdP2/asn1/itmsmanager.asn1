@@ -1,0 +1,14 @@
+ITMSMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER; 
+    
+    --/request/itmsmanager/managerstatusrequest
+    ASN1-ManagerStatusRequest ::= SEQUENCE {
+    	messageHeader ASN1-MessageHeader,
+	...
+    }
+
+END
+
+
+     

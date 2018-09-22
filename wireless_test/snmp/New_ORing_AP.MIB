@@ -1,0 +1,465 @@
+ORING-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+        enterprises,
+        NOTIFICATION-TYPE,
+                FROM SNMPv2-SMI;
+
+oring                OBJECT IDENTIFIER ::= { enterprises 25972 }
+vendorOring          OBJECT IDENTIFIER ::= { oring 100 }
+classProductsAP      OBJECT IDENTIFIER ::= { vendorOring 2 }
+classBGN              OBJECT IDENTIFIER ::= { classProductsAP 0 }
+class2Port           OBJECT IDENTIFIER ::= { classBGN 0 }
+
+Info			  OBJECT IDENTIFIER ::= { class2Port 2 }
+wirelessstate	OBJECT IDENTIFIER ::= { class2Port 3 }
+wirelessrelay	OBJECT IDENTIFIER ::= { class2Port 4 }
+wirelessInfo	OBJECT IDENTIFIER ::= { class2Port 5 }
+wireless	OBJECT IDENTIFIER ::= { class2Port 6 }
+
+
+DisplayString ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "255a"
+    STATUS       current
+    DESCRIPTION  ""
+    SYNTAX       OCTET STRING (SIZE (0..255))
+
+PortList ::= OCTET STRING
+
+WirelessInfoIfNumber ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d"
+    STATUS     current 
+    DESCRIPTION
+            ""
+    SYNTAX 	Integer32(1..4096)
+	
+WirelessStateListIfNumber ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d"
+    STATUS     current 
+    DESCRIPTION
+            ""
+    SYNTAX 	Integer32(1..4096)
+
+InterfaceIndex ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "d"
+    STATUS       current
+    DESCRIPTION  ""
+    SYNTAX       Integer32 (1..2147483647)
+	
+--
+--Info
+--
+
+OperationMode OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "Operation Mode."
+       ::= { Info 1 }
+
+SSID OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "SSID name."
+       ::= { Info 2 }
+
+PeerAPSSID OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "Peer AP SSID name."
+       ::= { Info 3 }
+       
+APChannel OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "AP channel."
+       ::= { Info 4 }
+       
+RFType OBJECT-TYPE
+       SYNTAX      DisplayString (SIZE (0..255))
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION "RF Type."
+       ::= { Info 5 }
+
+--
+--wirelessInfo
+--
+
+wireless1InfoEnable	OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+                	disable(0),
+                	enable(1)
+                }
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless Enable"
+	::= { wirelessInfo 1 }
+
+wireless1InfoSSID OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless SSID."
+	::= { wirelessInfo 2 }
+
+wireless1InfoChannel OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless Channel."
+	::= { wirelessInfo 3 }
+
+wireless1InfoEncrypt OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					none(0),
+					wep64(1),
+					wep128(2),
+					wpapskwpa2psk(3),
+					wpawpa2(4)
+				}
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless Encryption Type."
+	::= { wirelessInfo 4 }
+
+wireless1InfoTxPower OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+					highest(0),
+                	low(1),
+                	medium(2),
+					high(3)
+                }
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless TxPower 25-100%."
+	::= { wirelessInfo 5 }
+
+wireless1InfoState OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					apmode(0),
+					disconnected(1),
+					connected(2),
+					associated(3)
+				}
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless state."
+	::= { wirelessInfo 6 }
+
+wireless2InfoEnable	OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+                	disable(0),
+                	enable(1)
+                }
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless Enable"
+	::= { wirelessInfo 7 }
+
+wireless2InfoSSID OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless SSID."
+	::= { wirelessInfo 8 }
+
+wireless2InfoChannel OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless Channel."
+	::= { wirelessInfo 9 }
+
+wireless2InfoEncrypt OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					none(0),
+					wep64(1),
+					wep128(2),
+					wpapskwpa2psk(3),
+					wpawpa2(4)
+				}
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless Encryption Type."
+	::= { wirelessInfo 10 }
+
+wireless2InfoTxPower OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+					highest(0),
+                	low(1),
+                	medium(2),
+					high(3)
+                }
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless TxPower 25-100%."
+	::= { wirelessInfo 11 }
+
+wireless2InfoState OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					apmode(0),
+					disconnected(1),
+					connected(2),
+					associated(3)
+				}
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless state."
+	::= { wirelessInfo 12 }
+
+wireless1InfoShareKey OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless WPA-PSK share key."
+	::= { wirelessInfo 13 }
+
+wireless2InfoShareKey OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless WPA-PSK share key."
+	::= { wirelessInfo 14 }
+
+wireless1Apply OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					disable(0),
+					enable(1)
+				}
+	MAX-ACCESS	read-write
+	STATUS		current
+	DESCRIPTION "Apply to restart wireless1 config."
+	::= { wirelessInfo 15 }
+
+wireless2Apply OBJECT-TYPE
+	SYNTAX		INTEGER
+				{
+					disable(0),
+					enable(1)
+				}
+	MAX-ACCESS	read-write
+	STATUS		current
+	DESCRIPTION "Apply to restart wireless2 config."
+	::= { wirelessInfo 16 }
+
+
+
+
+wirelessConfTable OBJECT-TYPE
+	SYNTAX      SEQUENCE OF WirelessConfEntry
+    MAX-ACCESS  not-accessible
+	STATUS      current
+    DESCRIPTION
+            "The table of wireless configure."
+	::= { wireless 1 }
+
+wirelessConfEntry   OBJECT-TYPE
+    SYNTAX      WirelessConfEntry
+    MAX-ACCESS  not-accessible
+	STATUS      current
+    DESCRIPTION
+            ""
+     INDEX  { wirelessInfoIfNum }
+    ::= { wirelessConfTable 1 }
+
+WirelessConfEntry ::= SEQUENCE {
+      wirelessInfoIfNum					InterfaceIndex,
+      wirelessInfoEnable        		INTEGER,
+      wirelessInfoSSID					DisplayString,
+      wirelessInfoChannel       		Integer32,
+      wirelessInfoEncrypt				DisplayString,
+      wirelessInfoTxPower				INTEGER,
+      wirelessInfoState				DisplayString
+       }
+
+wirelessInfoIfNum OBJECT-TYPE
+    SYNTAX      InterfaceIndex
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION ""
+    ::= { wirelessConfEntry 1 }
+
+wirelessInfoEnable	OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+                	disable(0),
+                	enable(1)
+                }
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless Enable"
+	::= { wirelessConfEntry 2 }
+
+wirelessInfoSSID OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless SSID."
+	::= { wirelessConfEntry 3 }
+
+wirelessInfoChannel OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless Channel."
+	::= { wirelessConfEntry 4 }
+
+wirelessInfoEncrypt OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless Encryption Type."
+	::= { wirelessConfEntry 5 }
+
+wirelessInfoTxPower OBJECT-TYPE
+	SYNTAX		INTEGER
+                { 
+					highest(0),
+                	low(1),
+                	medium(2),
+					high(3)
+                }
+	MAX-ACCESS  read-write
+	STATUS      current
+	DESCRIPTION "Wireless TxPower 25-100%."
+	::= { wirelessConfEntry 6 }
+
+wirelessInfoState OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Wireless state."
+	::= { wirelessConfEntry 7 }
+
+--
+--wirelessStateList
+--
+
+wirelessStateListTable OBJECT-TYPE
+	SYNTAX      SEQUENCE OF WirelessStateListEntry
+    MAX-ACCESS  not-accessible
+	STATUS      current
+    DESCRIPTION
+            "The table of wireless state list."
+	::= { wireless 2 }
+
+wirelessStateListEntry   OBJECT-TYPE
+    SYNTAX      WirelessStateListEntry
+    MAX-ACCESS  not-accessible
+	STATUS      current
+    DESCRIPTION
+            ""
+     INDEX  { wirelessStateIfNum }
+    ::= { wirelessStateListTable 1 }
+
+WirelessStateListEntry ::= SEQUENCE {
+      wirelessStateIfNum			InterfaceIndex,
+      wirelessStateMAC        		DisplayString,
+      wirelessStateRxBytes			Integer32,
+      wirelessStateRxPackets		Integer32,
+      wirelessStateTxBytes			Integer32,
+      wirelessStateTxPackets		Integer32,
+      wirelessStateRSSI       		Integer32,
+      wirelessStateTxBitrate		Integer32,
+      wirelessStateLinktype			DisplayString
+       }
+
+wirelessStateIfNum OBJECT-TYPE
+    SYNTAX      InterfaceIndex
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION ""
+    ::= { wirelessStateListEntry 1 }
+
+wirelessStateMAC OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Mac address."
+	::= { wirelessStateListEntry 2 }
+
+wirelessStateRxBytes OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Rx bytes."
+	::= { wirelessStateListEntry 3 }
+
+wirelessStateRxPackets OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Rx packets."
+	::= { wirelessStateListEntry 4 }
+
+wirelessStateTxBytes OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Tx bytes."
+	::= { wirelessStateListEntry 5 }
+
+wirelessStateTxPackets OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Tx packets."
+	::= { wirelessStateListEntry 6 }
+
+wirelessStateRSSI OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "RSSI."
+	::= { wirelessStateListEntry 7 }
+
+wirelessStateTxBitrate OBJECT-TYPE
+	SYNTAX		Integer32
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Tx bit rate."
+	::= { wirelessStateListEntry 8 }
+
+wirelessStateLinktype OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..255))
+	MAX-ACCESS  read-only
+	STATUS      current
+	DESCRIPTION "Link type."
+	::= { wirelessStateListEntry 9 }
+
+	   
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+-- Message definitions common to all or some managers
+
+COMMONMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER;
+
+    --/event/managerstatus
+    -- errorCode: error codes are defined in common_base/error_codes.h. Error code == 0 means no error.
+    -- critical: applies only if errorCode != 0
+    ASN1-ManagerStatus ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        errorCode     INTEGER,
+        critical      BOOLEAN,
+        ...
+    }
+
+END

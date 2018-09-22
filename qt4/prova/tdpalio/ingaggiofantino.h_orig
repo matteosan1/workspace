@@ -1,0 +1,29 @@
+#ifndef INGAGGIOFANTINO_H
+#define INGAGGIOFANTINO_H
+
+#include <windows.h>
+#include "fantino.h"
+#include <string>
+
+using namespace std;
+
+class IngaggioFantino {
+    public:
+        IngaggioFantino(Fantino* fan, int c);
+        virtual ~IngaggioFantino();
+        int getScelta() { return scelta; };
+
+        void InitList();
+        void InitImage();
+        void FillList();
+
+        BOOL CALLBACK DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+        HWND hwndCtl;
+
+    private:
+        int contrada;
+        int scelta;
+        Fantino fantini[15];
+};
+
+#endif

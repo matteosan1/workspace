@@ -1,0 +1,687 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>StrategiaProve</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>StrategiaProve</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>671</width>
+            <height>441</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Strategia Prove</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout23</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>contradaLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>textLabel2</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>montaLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>textLabel2</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout22</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout70</cstring>
+                            </property>
+                            <vbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QGroupBox">
+                                    <property name="name">
+                                        <cstring>scelta1Box</cstring>
+                                    </property>
+                                    <property name="title">
+                                        <string>Fantino: prima scelta</string>
+                                    </property>
+                                    <hbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLayoutWidget">
+                                            <property name="name">
+                                                <cstring>layout65</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout63</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>scelta1Combo</cstring>
+                                                            </property>
+                                                            <property name="autoMask">
+                                                                <bool>true</bool>
+                                                            </property>
+                                                            <property name="duplicatesEnabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QCheckBox">
+                                                            <property name="name">
+                                                                <cstring>scelta1Check</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Non montare:</string>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout62</cstring>
+                                                    </property>
+                                                    <grid>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QComboBox" row="1" column="0" rowspan="1" colspan="2">
+                                                            <property name="name">
+                                                                <cstring>contrada1Combo</cstring>
+                                                            </property>
+                                                            <property name="enabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QSpinBox" row="0" column="1">
+                                                            <property name="name">
+                                                                <cstring>scelta1Spin</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <spacer row="0" column="0">
+                                                            <property name="name">
+                                                                <cstring>spacer18</cstring>
+                                                            </property>
+                                                            <property name="orientation">
+                                                                <enum>Horizontal</enum>
+                                                            </property>
+                                                            <property name="sizeType">
+                                                                <enum>Expanding</enum>
+                                                            </property>
+                                                            <property name="sizeHint">
+                                                                <size>
+                                                                    <width>40</width>
+                                                                    <height>20</height>
+                                                                </size>
+                                                            </property>
+                                                        </spacer>
+                                                    </grid>
+                                                </widget>
+                                            </hbox>
+                                        </widget>
+                                    </hbox>
+                                </widget>
+                                <widget class="QGroupBox">
+                                    <property name="name">
+                                        <cstring>scelta2Group</cstring>
+                                    </property>
+                                    <property name="title">
+                                        <string>Fantino:seconda scelta</string>
+                                    </property>
+                                    <hbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLayoutWidget">
+                                            <property name="name">
+                                                <cstring>layout67</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout40</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>scelta2Combo</cstring>
+                                                            </property>
+                                                            <property name="autoMask">
+                                                                <bool>true</bool>
+                                                            </property>
+                                                            <property name="duplicatesEnabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QCheckBox">
+                                                            <property name="name">
+                                                                <cstring>scelta2Check</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Non montare:</string>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout42</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QLayoutWidget">
+                                                            <property name="name">
+                                                                <cstring>layout37</cstring>
+                                                            </property>
+                                                            <hbox>
+                                                                <property name="name">
+                                                                    <cstring>unnamed</cstring>
+                                                                </property>
+                                                                <spacer>
+                                                                    <property name="name">
+                                                                        <cstring>spacer12_4</cstring>
+                                                                    </property>
+                                                                    <property name="orientation">
+                                                                        <enum>Horizontal</enum>
+                                                                    </property>
+                                                                    <property name="sizeType">
+                                                                        <enum>Expanding</enum>
+                                                                    </property>
+                                                                    <property name="sizeHint">
+                                                                        <size>
+                                                                            <width>40</width>
+                                                                            <height>20</height>
+                                                                        </size>
+                                                                    </property>
+                                                                </spacer>
+                                                                <widget class="QSpinBox">
+                                                                    <property name="name">
+                                                                        <cstring>scelta2Spin</cstring>
+                                                                    </property>
+                                                                </widget>
+                                                            </hbox>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>contrada2Combo</cstring>
+                                                            </property>
+                                                            <property name="enabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                            </hbox>
+                                        </widget>
+                                    </hbox>
+                                </widget>
+                                <widget class="QGroupBox">
+                                    <property name="name">
+                                        <cstring>scelta3Group</cstring>
+                                    </property>
+                                    <property name="title">
+                                        <string>Fantino: terza scelta</string>
+                                    </property>
+                                    <hbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLayoutWidget">
+                                            <property name="name">
+                                                <cstring>layout69</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout41</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>scelta3Combo</cstring>
+                                                            </property>
+                                                            <property name="autoMask">
+                                                                <bool>true</bool>
+                                                            </property>
+                                                            <property name="duplicatesEnabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QCheckBox">
+                                                            <property name="name">
+                                                                <cstring>scelta3Check</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Non montare:</string>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout43</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QLayoutWidget">
+                                                            <property name="name">
+                                                                <cstring>layout39</cstring>
+                                                            </property>
+                                                            <hbox>
+                                                                <property name="name">
+                                                                    <cstring>unnamed</cstring>
+                                                                </property>
+                                                                <spacer>
+                                                                    <property name="name">
+                                                                        <cstring>spacer12_3</cstring>
+                                                                    </property>
+                                                                    <property name="orientation">
+                                                                        <enum>Horizontal</enum>
+                                                                    </property>
+                                                                    <property name="sizeType">
+                                                                        <enum>Expanding</enum>
+                                                                    </property>
+                                                                    <property name="sizeHint">
+                                                                        <size>
+                                                                            <width>40</width>
+                                                                            <height>20</height>
+                                                                        </size>
+                                                                    </property>
+                                                                </spacer>
+                                                                <widget class="QSpinBox">
+                                                                    <property name="name">
+                                                                        <cstring>scelta3Spin</cstring>
+                                                                    </property>
+                                                                </widget>
+                                                            </hbox>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>contrada3Combo</cstring>
+                                                            </property>
+                                                            <property name="enabled">
+                                                                <bool>false</bool>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                            </hbox>
+                                        </widget>
+                                    </hbox>
+                                </widget>
+                            </vbox>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer20</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>174</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout20</cstring>
+                            </property>
+                            <vbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QGroupBox">
+                                    <property name="name">
+                                        <cstring>provaBox</cstring>
+                                    </property>
+                                    <property name="title">
+                                        <string>Strategia Prove</string>
+                                    </property>
+                                    <hbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLayoutWidget">
+                                            <property name="name">
+                                                <cstring>layout5</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout3</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>primaLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Prima Prova:</string>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>secondaLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Seconda Prova:</string>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>terzaLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Terza Prova:</string>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>quartaLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Quarta Prova:</string>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>generaleLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Prova Generale:</string>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>acciaLabel</cstring>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Provaccia:</string>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                                <widget class="QLayoutWidget">
+                                                    <property name="name">
+                                                        <cstring>layout4</cstring>
+                                                    </property>
+                                                    <vbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>primaCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>secondaCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>terzaCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>quartaCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>generaleCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QComboBox">
+                                                            <property name="name">
+                                                                <cstring>acciaCombo</cstring>
+                                                            </property>
+                                                        </widget>
+                                                    </vbox>
+                                                </widget>
+                                            </hbox>
+                                        </widget>
+                                    </hbox>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer19</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>cavalloLabel</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>textLabel1</string>
+                                    </property>
+                                </widget>
+                                <widget class="QProgressBar">
+                                    <property name="name">
+                                        <cstring>formaBar</cstring>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer19_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </vbox>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout1_2</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer1_4</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>okButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>OK</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer1_2_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>cancelButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cancella</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer1_3_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>okButton</sender>
+        <signal>clicked()</signal>
+        <receiver>StrategiaProve</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>StrategiaProve</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>scelta1Check</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>StrategiaProve</receiver>
+        <slot>enableCombo1(int)</slot>
+    </connection>
+    <connection>
+        <sender>scelta2Check</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>StrategiaProve</receiver>
+        <slot>enableCombo2(int)</slot>
+    </connection>
+    <connection>
+        <sender>scelta3Check</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>StrategiaProve</receiver>
+        <slot>enableCombo3(int)</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">barbero.h</include>
+    <include location="local" impldecl="in implementation">strategiaprove.ui.h</include>
+</includes>
+<slots>
+    <slot>FillCombo( QStringList fantini, QStringList contrade, Barbero * contrada, int * status )</slot>
+    <slot>enableCombo1( int state )</slot>
+    <slot>enableCombo2( int state )</slot>
+    <slot>enableCombo3( int state )</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

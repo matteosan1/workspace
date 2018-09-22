@@ -1,0 +1,24 @@
+SIGNALWARNINGMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER
+    	    ASN1-TrainID FROM TYPES;
+
+    --/event/signalwarning/cleanarea
+    --/event/signalwarning/degradedarea
+    ASN1-DegradedArea ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	trains  SET OF ASN1-TrainID,
+	...
+    }
+    
+    --/event/signalwarning/signalopened
+    --/event/signalwarning/signalclosed
+    ASN1-SignalClosed ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	train  ASN1-TrainID,
+	...
+    }
+END
+
+
+     

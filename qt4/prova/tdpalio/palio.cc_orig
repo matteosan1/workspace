@@ -1,0 +1,412 @@
+#include "palio.h"
+#include "utility.h"
+#include <iostream>
+}
+
+LRESULT Palio::OnNotify(HWND hwnd, WPARAM wParam,LPARAM lParam) {
+
+/*
+    int iIndex;
+
+    switch(LOWORD(wParam))
+	{
+		case IDC_LISTVIEW:
+            LPNMLISTVIEW pnm = (LPNMLISTVIEW)lParam;
+
+            if(pnm->hdr.hwndFrom == listview && pnm->hdr.code == NM_CUSTOMDRAW)
+            {
+                return ProcessCustomDraw(lParam);
+            }
+    }
+
+    if (((LPNMHDR)lParam)->code == NM_RCLICK)
+    {
+        POINT pt;
+        RECT rect, rect1;
+        RECT FAR* rect_item;
+        SCROLLINFO schinfo, scvinfo;
+
+        GetCursorPos(&pt);
+        GetWindowRect(listview, &rect);
+        schinfo.fMask = SIF_POS;
+        GetScrollInfo(listview, SB_HORZ, &schinfo);
+        scvinfo.fMask = SIF_POS;
+        GetScrollInfo(listview, SB_VERT, &scvinfo);
+
+        int col = (pt.x - rect.left + schinfo.nPos - 150) / 60;
+        int row = (pt.y - rect.top - 18 + scvinfo.nPos) / 19;
+
+        if ((col < num_partite) && (row < num_giocatori) &&
+            (col >= 0))
+        ModifyVote(hwnd, col, row);
+        return 0;
+    }
+*/
+}
+
+BOOL Palio::OnGioco(HWND hwndCtl, int nID, UINT uNotifyCode) {
+    Controller(hwndCtl);
+    return 0;
+}
+
+void Palio::Controller(HWND hwnd) {
+// chiama le varie funzioni delle varie fasi del palio.
+// abilita o disabilita la funzione di salvataggio del gioco
+
+    switch(mese) {
+        case 0:
+            for(int i=0; i<10; i++)
+                corrono[i]=luglio[i];
+            break;
+        case 1:
+            for(int i=0; i<10; i++)
+                corrono[i]=agosto[i];
+            break;
+        case 2:
+            for(int i=0; i<10; i++)
+                corrono[i]=settembre[i];
+            break;
+    }
+
+    for(int i=0; i<10; i++)
+        barberi[i].setContrada(&contrade[corrono[i]]);
+
+// visualizzazione estrazione
+
+//    SceltaCavalli(hwnd);
+//    Assegnazione();
+//    SceltaStrategia();
+
+// Prima scelta del fantino (tutte le contrade devono avere un fantino per la prima prova)
+
+    while(SceltaFantino(hwnd, -1) != 10);
+
+    for(int prove=0; prove<6; prove++) {
+        Prove(hwnd);
+        InserisciPartito(hwnd);
+        SceltaFantino(hwnd, prove);
+    }
+
+    //Carriera
+}
+
+int Palio::Avversaria(int io) {
+    for(int i=0; i<10; i++) {
+        if (contrade[io].avversaria() == corrono[i])
+            return corrono[i];
+    }
+
+    return -1;
+}
+
+void Palio::SceltaStrategia() {
+
+    Strategia strategia;
+    for(int i=0; i<10; i++){
+        int avversaria = Avversaria(corrono[i]);
+        Cavallo c1 = cavalli[contrade[corrono[i]].barbero()];
+        float media1 = (c1.scatto() + c1.velocita() + c1.precisione())/3.;
+
+        if (avversaria != -1) {
+            Cavallo c2 = cavalli[contrade[avversaria].barbero()];
+            float media2 = (c2.scatto() + c2.velocita() + c2.precisione())/3.;
+            contrade[corrono[i]].setStrategia(strategia.value(media1, media2,
+                contrade[corrono[i]].denaro(), contrade[corrono[i]].cuffia()));
+        }
+        else
+            contrade[corrono[i]].setStrategia(strategia.value(media1, 0,
+                contrade[corrono[i]].denaro(), contrade[corrono[i]].cuffia()));
+    }
+}
+
+void Palio::SceltaCavalli(HWND hwnd) {
+
+    int cav[21];
+    OrdinaI(21, cav, random);
+    int voti[21], *parziale, selezione[21];
+    int volte = 0, totale = 0;
+
+    for(int i=0; i<21; i++)
+        selezione[i] = 0;
+
+    while(1) {
+// ricordarsi le scelte di ogni giocatore e disabilitare i cavalli gia`scelti
+        for(int i=0; i<21; i++)
+            voti[i] = 0;
+
+        for (int i=0; i<10; i++) {
+
+            if (contrade[corrono[i]].giocatore() != -1) {
+                tratta = new Tratta(cavalli, cav, 10 - totale, selezione);
+                int ret = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_TRATTA), hwnd, TrattaProc);
+                parziale = tratta->getScelta();
+            }
+            else {
+                int n[21], punti[21];
+                for(int j=0; j<21; j++) {
+                    if (selezione[j] == 0) {
+                        float media = (cavalli[i].scatto()+cavalli[i].velocita()+cavalli[i].precisione())/3.;
+                        int center = (int)(media*10.) - cavalli[cav[j]].paliCorsi() +
+                            cavalli[cav[j]].paliVinti()*5;
+                        punti[j] = Uniform_symmetric(center, 10 - volte *3, random);
+                        cout << center << endl;
+                        cout << punti[j] << endl;
+                    }
+                }
+
+                OrdinaI_fixed(21, n, punti);
+                for(int j=0; j<10; j++){
+                    parziale[n[j]] = 1;
+                    cout << n[j] << endl;
+}
+                for(int j=10; j<21; j++)
+                    parziale[n[j]] = 0;
+            }
+
+            for(int j=0; j<21; j++)
+                voti[j] += parziale[j];
+        }
+
+        totale = 0;
+        for(int i=0; i<21; i++) {
+            if (voti[i] > 5)
+                selezione[i] = 1;
+            totale += selezione[i];
+            cout << cavalli[cav[i]].getNome() << " " << selezione[i] << endl;
+        }
+
+        if (totale > 9)
+            break;
+        else
+            volte++;
+
+    }
+
+    int y=0;
+    for(int i=0; i<21; i++) {
+        if (selezione[i] == 1) {
+            cavalli_c[y] = cav[i];
+            y++;
+        }
+        if (y == 10)
+            break;
+    }
+
+}
+
+void Palio::Assegnazione() {
+
+    int n1[10], n2[10];
+    OrdinaI(10, n1, random);
+    OrdinaI(10, n2, random);
+// visualizzazione assegnazione
+
+    for(int i=0; i<10; i++) {
+        ordine_prova[i][0] = corrono[i];                //estrazione
+        ordine_prova[i][1] = corrono[9-i];
+        ordine_prova[i][2] = corrono[n2[i]];            //assegnazione
+        ordine_prova[i][3] = corrono[n2[9-i]];
+        for(int j=0; j<10; j++) {
+            if (n1[j] == i)
+                ordine_prova[i][4] = corrono[n2[j]];    // numero d'orecchio
+            if (n1[j] == 9-i)
+                ordine_prova[i][5] = corrono[n2[j]];
+        }
+    }
+}
+
+int Palio::SceltaFantino(HWND hwnd, int prove) {
+
+    for(int z=0; z<10; z++) {
+
+        int gioc = barberi[z].getContrada()->giocatore();
+        if (gioc != -1) {
+            ingaggioFantino = new IngaggioFantino(fantini, gioc);
+            int ret = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_SCELTA_FANTINO), hwnd, IngaggioFantinoProc);
+            if (ret == IDOK) {
+
+                string c[10];
+                int io = -1;
+                for(int i=0; i<10; i++) {
+                    if (barberi[i].getContrada()->giocatore() == gioc) {
+                        io = i;
+                        continue;
+                    }
+
+                    c[i] = barberi[i].getContrada()->getNome();
+                }
+
+                offertaFantino = new OffertaFantino(fantini[ingaggioFantino->getScelta()], gioc, io, c);
+                int ret1 = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_OFFERTA_FANTINO), hwnd, OffertaFantinoProc);
+                if (ret1 == IDOK)
+                    if(!fantini[ingaggioFantino->getScelta()].setOfferta(io, offertaFantino->getContrada(),
+                                offertaFantino->getAVincere(), offertaFantino->getAPerdere()))
+                        MessageBox( NULL, TEXT("Questo fantino non puo` ricevere piu` offerte."), TEXT("ATTENZIONE !!!"), MB_OK|MB_ICONWARNING);
+                else
+                    MessageBox( NULL, TEXT("Nessuna offerta inviata."), TEXT("ATTENZIONE !!!"), MB_OK|MB_ICONWARNING);
+            }
+        }
+        else {
+            // sceglie il fantino in base alla strategia partendo dal primo
+            // l'offerta e` pari al 25% della base ncon variazione random + nulla o -
+            // a scalare l'offerta sara` del
+            // al secondo giro se incassato il no passa a quello dopo
+            // se e` in dubbio e tira a vincere alza l'offerta
+            // intanto monta un giovane
+
+        }
+    }
+
+    RisposteFantini(hwnd, prove);
+    int nOK = 0;
+    for(int i=0; i<10; i++)
+        if (barberi[i].getFantino() != 0)
+            nOK++;
+
+    if (prove == 6)
+        Segnatura(hwnd);
+
+    return nOK;
+}
+
+void Palio::Segnatura(HWND hwnd) {
+
+    for(int i=0; i<10; i++) {
+
+        if (barberi[i].getFantino()->prontezza() == -1) {
+            segnaFantino = new SegnaFantino(barberi[i].getContrada()->getNome());
+            int ret = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_OFFERTA_FANTINO), hwnd, OffertaFantinoProc);
+            if (ret == IDOK) {
+                Fantino* f = barberi[i].getFantino();
+                string nome = f->getNome();
+                int a, b, c;
+                a = Uniform_symmetric(5, 5, random);
+                b = Uniform_symmetric(5, 5, random);
+                c = Uniform_symmetric(5, 5, random);
+
+                fantini[nFantini].creaFantino(nome, a, b, c, f->correper(), f->nOfferte(), f->getOfferte());
+                nFantini++;
+                barberi[i].setFantino(&fantini[nFantini]);
+            }
+        }
+    }
+}
+
+void Palio::RisposteFantini(HWND hwnd, int prove) {
+
+    for(int i=0; i<nFantini; i++) {
+
+        float decisione[17];
+        int num[fantini[i].nOfferte()];
+
+        if (fantini[i].nOfferte() != 0) {
+            for(int j=0; j<fantini[i].nOfferte(); j++) {
+
+                // manca rete neurale per decidere delle offerte
+            }
+
+            OrdinaF_fixed(nFantini, num, decisione);
+            if (num[0] > (1.5 - (prove*0.5))) {
+
+                int chi = fantini[i].getOfferta(num[0]).getChi();
+                int g = barberi[chi].getContrada()->giocatore();
+                if (g != -1) {
+                    string s = "Il fantino " + fantini[i].getNome()
+                        + " accetta di correre per la Contrada " + barberi[chi].getContrada()->getNome();
+                    string s1 = "Comunicazione per il Capitano " + giocatori[g].nomeCompleto();
+                    MessageBox( NULL, s.c_str(), s1.c_str(), MB_OK|MB_ICONWARNING);
+                }
+
+                fantini[i].clearOfferte(num[0]);
+                fantini[i].setContrada(chi);
+                barberi[chi].setFantino(&fantini[i]);
+            }
+            else {
+                // avverti tutti quelli da 0.8 a 1.5 che prende tempo
+            }
+        }
+    }
+}
+
+void Palio::InserisciPartito(HWND hwnd) {
+
+    for(int z=0; z<10; z++) {           // partiti per quelle che non corrono ?
+
+        int gioc = barberi[z].getContrada()->giocatore();
+        if (gioc != -1) {
+
+            string c1[10], c2[17];
+            int io1 = -1, io2 = -1;
+            for(int i=0; i<10; i++) {
+
+                if (barberi[i].getContrada()->giocatore() == gioc) {
+                    io1 = i;
+                    continue;
+                }
+                c1[i] = barberi[i].getContrada()->getNome();
+            }
+
+            for(int i=0; i<17; i++) {
+
+                if (barberi[z].getContrada()->getNome() == contrade[i].getNome()) {
+                    io2 = i;
+                    continue;
+                }
+                c2[i] = contrade[i].getNome();
+            }
+
+            nuovoPartito = new NuovoPartito(io1, io2, barberi[z], c1, c2);
+            int ret = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_PARTITI), hwnd, NuovoPartitoProc);
+
+            if (ret == IDOK) {
+
+
+            }
+        }
+        else {
+            // c'é bisogno della rete neurale per i partiti fatti dal computer
+        }
+    }
+
+    RispostePartiti(hwnd);
+}
+
+void Palio::RispostePartiti(HWND hwnd) {
+
+    for(int z=0; z<10; z++) {
+        // raccogli le i partiti relativi ad ogni contrada e proponili insieme.
+
+
+    }
+}
+
+void Palio::Prove(HWND hwnd) {
+
+    for(int z=0; z<10; z++) {           // partiti per quelle che non corrono ?
+
+        int gioc = barberi[z].getContrada()->giocatore();
+        if (gioc != -1) {
+
+            string c[10];
+            int io = -1;
+            for(int i=0; i<10; i++) {
+
+                if (barberi[i].getContrada()->giocatore() == gioc) {
+                    io = i;
+                    continue;
+                }
+                c[i] = barberi[i].getContrada()->getNome();
+            }
+
+            int s[6];
+            for(int i=0; i<6; i++)
+                s[i] = 0;
+
+            strategiaProve = new StrategiaProve(io, s, c);
+            int ret = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_STRATEGIA_PROVE), hwnd, StrategiaProveProc);
+        }
+        else {
+             // manca la rete neurale per decidere dei partiti
+        }
+    }
+}

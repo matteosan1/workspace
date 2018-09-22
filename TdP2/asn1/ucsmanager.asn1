@@ -1,0 +1,37 @@
+UCSMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER
+    	    ASN1-TrainID,
+	    ASN1-RouteID,
+ 	    ASN1-RouteStatus,
+	    ASN1-RouteRequestEnum,
+	    ASN1-TrainLocalization  FROM TYPES;
+
+    --/request/ucsmanager/routerequest
+    ASN1-RouteRequest ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	status        ASN1-TrainLocalization,
+	...
+    }
+
+    --/state/ucsmanager/routestatuschanged
+    ASN1-RouteStatusChanged ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	routeStatus   SET OF ASN1-RouteStatus,
+    	...
+    }
+
+    --/event/ucsmanager/routecanceled
+    --/event/ucsmanager/routedisabled
+    --/event/ucsmanager/routecreated
+    --/event/ucsmanager/routecreationacknowledged
+    ASN1-RouteAck ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+	train         ASN1-TrainID,
+	...
+    }
+
+END
+
+
+     

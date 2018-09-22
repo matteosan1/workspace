@@ -1,0 +1,30 @@
+#ifndef NUOVOPARTITO_H
+#define NUOVOPARTITO_H
+
+#include <windows.h>
+#include "barbero.h"
+#include <string>
+
+using namespace std;
+
+class NuovoPartito {
+    public:
+        NuovoPartito(int i, int y, Barbero b, string* c1, string* c2);
+        virtual ~NuovoPartito();
+
+        void InitDlg();
+        void FillList();
+        void OnExit();
+
+        BOOL CALLBACK DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+        HWND hwndCtl;
+
+    private:
+        int chi1, chi2;
+        Barbero barbero;
+        string contrade1[17];
+        string contrade2[10];
+        string tipi[6];
+};
+
+#endif

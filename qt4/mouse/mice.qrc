@@ -1,0 +1,8 @@
+<RCC>
+     <qresource prefix="/" >
+         <file>piazza.png</file>
+     </qresource>
+     <qresource prefix="/" >
+         <file>istrice.png</file>
+     </qresource>
+ </RCC>

@@ -1,0 +1,5 @@
+create table pannello_controllo (
+	indice smallint,
+	combo smallint,	
+	edit varchar(30));
+	

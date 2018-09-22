@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello Android! I am a string resource</string>
+    <string name="app_name">MyFirstProject</string>
+	<string name="no_todos">Currently there are no Todo items maintained</string>
+</resources>

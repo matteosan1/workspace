@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="piazza.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 177.14286,563.79075 L 291.42857,509.50504 L 437.14286,509.50504 L 545.71429,595.21933 L 591.42857,718.07647 L 145.71429,718.07647 L 177.14286,563.79075 z"
+       id="path2387"
+       inkscape:export-filename="/home/sani/mouse/piazza.png"
+       inkscape:export-xdpi="90.061264"
+       inkscape:export-ydpi="90.061264" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 94.285714,783.79075 L 485.71429,783.79075 L 694.28571,815.21933 L 668.57143,623.79075 L 540,469.50504 L 402.85714,438.07647 L 268.57143,438.07647 L 108.57143,500.93361 L 65.714286,643.79075 L 65.714286,783.79075 L 94.285714,783.79075 z"
+       id="path2389"
+       inkscape:export-filename="/home/sani/mouse/piazza.png"
+       inkscape:export-xdpi="90.061264"
+       inkscape:export-ydpi="90.061264" />
+    <path
+       style="opacity:1;fill:#c87137;fill-opacity:1;stroke:#0000ff;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 585.85714,797.11775 L 487.28571,781.84361 L 278,781.67438 L 68.714286,781.50504 L 68.573543,712.21933 L 68.432657,642.93361 L 89.2214,572.7037 L 110.01031,502.47367 L 191.50517,470.48495 L 273,438.49635 L 334.42857,438.49304 L 395.85714,438.48973 L 467.28571,454.78201 L 538.71429,471.0743 L 602.78394,548.03327 L 666.85357,624.99215 L 679.13351,715.3915 C 685.88749,765.11107 691.449,807.3979 691.49243,809.36218 C 691.59206,813.86607 700.91803,814.94707 585.85714,797.11775 z M 570.57866,656.40284 L 547.54171,594.15781 L 492.48014,550.68855 L 437.41843,507.21933 L 364.87134,507.21933 L 292.32426,507.21933 L 233.95303,534.70573 L 175.5818,562.19204 L 159.64534,640.42001 L 143.70871,718.6479 L 368.66214,718.6479 L 593.61557,718.6479 L 570.57866,656.40284 z"
+       id="path2391"
+       inkscape:export-filename="/home/sani/mouse/piazza.png"
+       inkscape:export-xdpi="90.061264"
+       inkscape:export-ydpi="90.061264" />
+    <path
+       style="opacity:1;fill:#c87137;fill-opacity:1;stroke:#0000ff;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 665.85714,808.08193 C 661.92857,807.41298 621.47143,801.1595 575.95237,794.18533 L 493.19043,781.50504 L 280.95237,781.50504 L 68.714286,781.50504 L 68.740086,713.6479 L 68.765914,645.79075 L 89.7892,574.97978 C 101.35194,536.03378 111.3046,503.75604 111.9062,503.25153 C 112.50771,502.74698 149.64286,488.00361 194.42857,470.48844 L 275.85714,438.64267 L 333,438.61198 L 390.14286,438.58118 L 461.57143,454.6085 C 500.85714,463.42347 535.16357,472.11704 537.80791,473.92753 C 541.45431,476.42413 640.24954,593.81321 662.34566,621.90413 C 664.37346,624.48215 670.96231,664.2091 677.26669,711.87004 C 683.47597,758.81215 689.05643,800.11218 689.66766,803.6479 C 690.63371,809.23604 689.61686,810.02561 681.88951,809.68738 C 677.00029,809.47335 669.78571,808.75093 665.85714,808.08195 L 665.85714,808.08193 z M 593.0776,713.6479 C 591.99823,710.8979 582.17591,684.21933 571.25017,654.36218 C 560.3244,624.50504 549.17709,597.2405 546.47831,593.7743 C 543.77951,590.3081 518.5512,569.41527 490.4154,547.34573 L 439.25943,507.21933 L 364.318,507.21933 L 289.3766,507.21933 L 234.04546,533.23738 C 203.61331,547.54733 177.68809,560.20924 176.43386,561.37495 C 174.71654,562.97113 143,711.00033 143,717.41953 C 143,718.09513 244.70897,718.6479 369.01997,718.6479 C 583.11989,718.6479 594.93643,718.38421 593.07754,713.6479 L 593.0776,713.6479 z"
+       id="path2393"
+       inkscape:export-filename="/home/sani/mouse/piazza.png"
+       inkscape:export-xdpi="90.061264"
+       inkscape:export-ydpi="90.061264" />
+  </g>
+</svg>

@@ -1,0 +1,145 @@
+#define _WIN32_IE 0x501
+
+#include <windows.h>
+#include "commctrl.h"
+#include "resource.h"
+
+#include "TRandom.h"
+
+#include "contrada.h"
+#include "giocatore.h"
+#include "cavallo.h"
+#include "fantino.h"
+#include "barbero.h"
+
+#include "nuovogioco.h"
+#include "nuovogiocatore.h"
+
+#include "tratta.h"
+#include "ingaggiofantino.h"
+#include "offertafantino.h"
+#include "strategiaprove.h"
+#include "nuovopartito.h"
+#include "segnafantino.h"
+
+#include <string>
+
+using namespace std;
+
+LRESULT CALLBACK MainWndProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK AboutDlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK NuovoGiocoProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK NuovoGiocatoreProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK TrattaProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK IngaggioFantinoProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK OffertaFantinoProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK StrategiaProveProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK NuovoPartitoProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+BOOL CALLBACK SegnaturaProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+
+class CppCntrl {
+
+    private:
+	   TCHAR        chClassName[100];
+	   TCHAR        chCaption[256];
+
+    public:
+        CppCntrl();
+        virtual ~CppCntrl();
+        virtual HWND Create(HWND hParent=NULL);
+        TCHAR* GetWndCaption();
+        TCHAR* GetWndClassName();
+        virtual void SetInstance(HINSTANCE hInstance);
+        virtual void SetWndCaption(TCHAR* chCap);
+        virtual void SetWndClassName(TCHAR* chClass);
+
+        HWND	hCntrl;
+        int nID;
+        int nExStyle;
+        int          nStyle;
+        int          Left,Top,Width,Height;
+        HINSTANCE    hInst;
+};
+
+class Palio {
+
+    public:
+        Palio();
+        virtual ~Palio();
+        virtual HWND Create(HWND hParent=NULL);
+
+        virtual LRESULT CALLBACK WndProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+        
+       	TCHAR* GetWndCaption();
+        TCHAR* GetWndClassName();
+        virtual void SetInstance(HINSTANCE hInstance);
+    	virtual void SetWndCaption(TCHAR* chCap);
+        virtual void SetWndClassName(TCHAR* chClass);
+
+        int Left,Top,Width,Height;
+        int nExStyle;
+        int nID;
+        int nStyle;
+
+        string nome_gioco;
+        int mese;
+        int anno;
+        int nGiocatori;
+        int nFantini;
+
+        string argomento;
+        TRandom* random;
+
+        Giocatore giocatori[17];
+        Fantino fantini[100];
+        Cavallo cavalli[21];
+        Contrada contrade[17];
+        Barbero barberi[10];
+        NuovoGioco* nGioco;
+        NuovoGiocatore* nGiocatore;
+        Tratta* tratta;
+        int luglio[17], agosto[17], settembre[17];
+        int corrono[17], ordine_prova[10][6], fantini_c[10], cavalli_c[10]; // controllare
+        IngaggioFantino* ingaggioFantino;
+        OffertaFantino* offertaFantino;
+        StrategiaProve* strategiaProve;
+        NuovoPartito* nuovoPartito;
+        SegnaFantino* segnaFantino;
+
+        void LoadFile();
+        void NewGame(HWND hwnd);
+        void NewPlayer(HWND hwnd);
+        void SaveFile(HWND hwnd);
+        void Setup();
+        void Estrazione(int a);
+        void Controller(HWND hwnd);
+        void SceltaCavalli(HWND hwnd);
+        void Assegnazione();
+        void SceltaStrategia();
+        int Avversaria(int io);
+        int SceltaFantino(HWND hwnd, int i);
+        void Prove(HWND hwnd);
+        void InserisciPartito(HWND hwnd);
+        void RisposteFantini(HWND hwnd, int i);
+        void Segnatura(HWND hwnd);
+        void RispostePartiti(HWND hwnd);
+
+        friend istream& operator>>(istream& p, Palio& x);
+        friend ostream& operator<<(ostream& p, Palio& x);
+
+   	protected:
+		HINSTANCE hInst;
+        virtual BOOL OnGioco(HWND hwnd, int nID,UINT uNotifyCode);
+        virtual BOOL OnCommand(HWND hwndCtl,int nID,UINT uNotifyCode);
+        virtual int  OnCreate(CREATESTRUCT *cs);
+        virtual BOOL OnDestroy();
+        virtual LRESULT OnNotify(HWND hwnd, WPARAM wParam, LPARAM lParam);
+
+    private:
+    	int nClassStyle;
+   		TCHAR chClassName[100];
+    	TCHAR chCaption[256];
+        HWND hAppWnd;
+        bool isModified;
+};
+

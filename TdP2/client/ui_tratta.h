@@ -1,0 +1,81 @@
+/********************************************************************************
+** Form generated from reading UI file 'tratta.ui'
+**
+** Created by: Qt User Interface Compiler version 4.8.7
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_TRATTA_H
+#define UI_TRATTA_H
+
+#include <Qt3Support/Q3MimeSourceFactory>
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QDialog>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QHeaderView>
+#include <QtGui/QPushButton>
+#include <QtGui/QTableWidget>
+#include <QtGui/QVBoxLayout>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_Tratta
+{
+public:
+    QVBoxLayout *vboxLayout;
+    QTableWidget *cavalliView;
+    QHBoxLayout *hboxLayout;
+    QPushButton *okButton;
+
+    void setupUi(QDialog *Tratta)
+    {
+        if (Tratta->objectName().isEmpty())
+            Tratta->setObjectName(QString::fromUtf8("Tratta"));
+        Tratta->resize(463, 481);
+        vboxLayout = new QVBoxLayout(Tratta);
+        vboxLayout->setSpacing(6);
+        vboxLayout->setContentsMargins(11, 11, 11, 11);
+        vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
+        cavalliView = new QTableWidget(Tratta);
+        cavalliView->setObjectName(QString::fromUtf8("cavalliView"));
+
+        vboxLayout->addWidget(cavalliView);
+
+        hboxLayout = new QHBoxLayout();
+        hboxLayout->setSpacing(6);
+        hboxLayout->setObjectName(QString::fromUtf8("hboxLayout"));
+        okButton = new QPushButton(Tratta);
+        okButton->setObjectName(QString::fromUtf8("okButton"));
+        okButton->setEnabled(false);
+
+        hboxLayout->addWidget(okButton);
+
+
+        vboxLayout->addLayout(hboxLayout);
+
+
+        retranslateUi(Tratta);
+        QObject::connect(okButton, SIGNAL(clicked()), Tratta, SLOT(accept()));
+
+        QMetaObject::connectSlotsByName(Tratta);
+    } // setupUi
+
+    void retranslateUi(QDialog *Tratta)
+    {
+        Tratta->setWindowTitle(QApplication::translate("Tratta", "Scelta Cavalli", 0, QApplication::UnicodeUTF8));
+        okButton->setText(QApplication::translate("Tratta", "OK", 0, QApplication::UnicodeUTF8));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class Tratta: public Ui_Tratta {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_TRATTA_H

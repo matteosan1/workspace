@@ -1,0 +1,6 @@
+nsmain.c (nsdata.c)
+nsmenu.c (nsdata.c)
+graph.c (nsdata.c)
+drawbug.c (nsdata.c)
+initsim.c (nsdata.c,update.c)
+datamod.c (nsdata.c)

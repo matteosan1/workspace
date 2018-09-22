@@ -1,0 +1,76 @@
+IOMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER; 
+    
+    ASN1-IOOperationType ::= ENUMERATED {
+    	setOutput(0),
+	pulse(1),
+	squareWave(2),
+	...
+    }
+
+    ASN1-IORegistrationType ::= ENUMERATED {
+        registration(0),
+	unregistration(1),
+	restore(2),
+	...
+    }
+        
+    -- value is in range 0-M (M depends on IoManager outputs config)
+    ASN1-IOBitStatus ::= SEQUENCE {
+        type          ASN1-IOOperationType,
+        index         INTEGER,
+	value         BOOLEAN,
+	duration      INTEGER,
+	waveDuration  INTEGER,
+	...
+    }
+
+    --/request/iomanager/setoutput
+    ASN1-IOSetOutput ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        bitStatus     SEQUENCE OF ASN1-IOBitStatus,
+	...
+    }
+
+    --/status/iomanager/inputchanged
+    ASN1-IOInputChanged ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        -- Always N elements (N depends on IoManager inputs config)
+        values        SEQUENCE OF INTEGER,
+	...
+    }
+
+    --/status/iomanager/outputchanged
+    ASN1-IOOutputChanged ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        -- Always M elements (M depends on IoManager outputs config)
+        values        SEQUENCE OF INTEGER,
+	exitCode      INTEGER, 
+	...
+    }
+
+    --/request/iomanager/registeroutput
+    --/request/iomanager/unregisteroutput
+    -- indices contains the list of outputs to register/unregister
+    -- outputs values are in range 0-M (M depends on IoManager outputs config)
+    ASN1-IORegistration ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        indices       SEQUENCE OF INTEGER,
+	...
+    }
+    
+    --/state/iomanager/outputregistrationchanged
+    -- indices contains the list of outputs registered/unregistered
+    -- outputs values are in range 0-M (M depends on IoManager outputs config)
+    ASN1-IOOutputRegistrationChanged ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        indices       SEQUENCE OF INTEGER,
+	type          ASN1-IORegistrationType,
+	exitCode      INTEGER,
+	...
+    }
+END
+
+
+     

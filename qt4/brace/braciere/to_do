@@ -1,0 +1,6 @@
+1) provare l'algo in una situazione reale
+2) definire gli oggetti base:
+	braciere: vector<Tavoli> base (leggere da file ???)
+		  vector<Prenotazioni>
+	prenotazione: nome, persone, tavolo* (???)
+	tavolo: posti, posti vuoti, vector<prenotazioni*>

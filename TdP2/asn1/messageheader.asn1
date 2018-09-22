@@ -1,0 +1,11 @@
+MESSAGEHEADER DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+    ASN1-MessageHeader ::= SEQUENCE {
+        senderId    INTEGER,
+        senderName  PrintableString,
+        recipientId INTEGER,
+        recipientName  PrintableString,
+	...
+    }
+END
+
+	

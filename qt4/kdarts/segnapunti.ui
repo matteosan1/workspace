@@ -1,0 +1,592 @@
+<ui version="4.0" >
+ <class>Segnapunti</class>
+ <widget class="QDialog" name="Segnapunti" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>372</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>700</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons" >
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::NoButton|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>247</width>
+     <height>686</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" >
+    <item row="0" column="0" >
+     <widget class="QPushButton" name="pushButton" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" >
+     <widget class="QPushButton" name="pushButton_2" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" >
+     <widget class="QPushButton" name="pushButton_3" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" >
+     <widget class="QPushButton" name="pushButton_104" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" >
+     <widget class="QPushButton" name="pushButton_103" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" >
+     <widget class="QPushButton" name="pushButton_105" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" >
+     <widget class="QPushButton" name="pushButton_106" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" >
+     <widget class="QPushButton" name="pushButton_107" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" >
+     <widget class="QPushButton" name="pushButton_108" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" >
+     <widget class="QPushButton" name="pushButton_111" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" >
+     <widget class="QPushButton" name="pushButton_109" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" >
+     <widget class="QPushButton" name="pushButton_110" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" >
+     <widget class="QPushButton" name="pushButton_114" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" >
+     <widget class="QPushButton" name="pushButton_112" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2" >
+     <widget class="QPushButton" name="pushButton_113" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" >
+     <widget class="QPushButton" name="pushButton_115" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" >
+     <widget class="QPushButton" name="pushButton_116" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2" >
+     <widget class="QPushButton" name="pushButton_117" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" >
+     <widget class="QPushButton" name="pushButton_119" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" >
+     <widget class="QPushButton" name="pushButton_120" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2" >
+     <widget class="QPushButton" name="pushButton_118" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" >
+     <widget class="QPushButton" name="pushButton_123" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item rowspan="2" row="7" column="1" >
+     <widget class="QPushButton" name="pushButton_122" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2" >
+     <widget class="QPushButton" name="pushButton_121" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item rowspan="2" row="8" column="0" >
+     <widget class="QPushButton" name="pushButton_124" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item rowspan="2" row="8" column="2" >
+     <widget class="QPushButton" name="pushButton_126" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1" >
+     <widget class="QPushButton" name="pushButton_125" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0" >
+     <widget class="QPushButton" name="pushButton_127" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1" >
+     <widget class="QPushButton" name="pushButton_128" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2" >
+     <widget class="QPushButton" name="pushButton_129" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" >
+     <widget class="QPushButton" name="pushButton_130" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1" >
+     <widget class="QPushButton" name="pushButton_132" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="2" >
+     <widget class="QPushButton" name="pushButton_131" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0" >
+     <widget class="QPushButton" name="pushButton_135" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1" >
+     <widget class="QPushButton" name="pushButton_133" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="2" >
+     <widget class="QPushButton" name="pushButton_134" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0" >
+     <widget class="QPushButton" name="pushButton_137" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1" >
+     <widget class="QPushButton" name="pushButton_136" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="2" >
+     <widget class="QPushButton" name="pushButton_138" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0" >
+     <widget class="QPushButton" name="pushButton_141" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1" >
+     <widget class="QPushButton" name="pushButton_139" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="2" >
+     <widget class="QPushButton" name="pushButton_140" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0" >
+     <widget class="QPushButton" name="pushButton_144" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1" >
+     <widget class="QPushButton" name="pushButton_142" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="2" >
+     <widget class="QPushButton" name="pushButton_143" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0" >
+     <widget class="QPushButton" name="pushButton_147" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1" >
+     <widget class="QPushButton" name="pushButton_145" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="2" >
+     <widget class="QPushButton" name="pushButton_146" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0" >
+     <widget class="QPushButton" name="pushButton_149" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="1" >
+     <widget class="QPushButton" name="pushButton_150" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="2" >
+     <widget class="QPushButton" name="pushButton_148" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0" >
+     <widget class="QPushButton" name="pushButton_152" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1" >
+     <widget class="QPushButton" name="pushButton_151" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="2" >
+     <widget class="QPushButton" name="pushButton_153" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0" >
+     <widget class="QPushButton" name="pushButton_156" >
+      <property name="text" >
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="1" >
+     <widget class="QPushButton" name="pushButton_155" >
+      <property name="text" >
+       <string>x2</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="2" >
+     <widget class="QPushButton" name="pushButton_154" >
+      <property name="text" >
+       <string>x3</string>
+      </property>
+      <property name="checkable" >
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Segnapunti</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Segnapunti</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

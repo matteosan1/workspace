@@ -1,0 +1,17 @@
+create table cd (
+	indice smallint auto_increment,
+	artista varchar(50) not null,
+	titolo varchar(100) not null,
+	etichetta varchar(30),
+	formato varchar(30),
+	fornitore varchar(30), 
+	codice varchar(20) not null, 
+	prezzo_acquisto float(5,2) default '0.00',
+ 	prezzo_vendita float(5,2) default '0.00',
+	prezzo_offerta float(5,2) default '0.00',
+	stato smallint default '1',
+	quantita smallint default '0',
+	prenotazioni smallint default '0',
+	venduti smallint default '0',
+	primary key(indice));
+	

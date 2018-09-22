@@ -1,0 +1,23 @@
+create table clienti (
+	indice smallint auto_increment,
+	nome varchar(30) not null,
+	cognome varchar(30) not null,
+	via1 varchar(40) default '',
+	citta1 varchar(25) default '',
+	stato1 varchar(25)  default '', 
+	cap1 varchar(10)  default '', 
+	nazione1 varchar(25)  default '',
+	presso varchar(40) default '',	
+	via2 varchar(40)  default '',
+	citta2 varchar(25)  default '',
+	stato2 varchar(25)  default '', 
+	cap2 varchar(10)  default '', 
+	nazione2 varchar(25)  default '',
+	telefono varchar(20)  default '',
+ 	cellulare varchar(20)  default '',
+	email varchar(50)  default '',
+	carta varchar(16)  default '',
+	iva varchar(16)  default '',
+	note text default '',
+	primary key(indice));
+	

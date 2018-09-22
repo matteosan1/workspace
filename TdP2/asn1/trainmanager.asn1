@@ -1,0 +1,22 @@
+TRAINMANAGER DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER
+            ASN1-TrainID,      
+    	    ASN1-Service,      
+	    ASN1-VehLoc,      
+	    ASN1-VehDiag,
+	    ASN1-TrainLocalization  FROM TYPES;
+
+    --/event/trainmanager/trainstatus
+    --/event/trainmanager/trainconnected
+    --/event/trainmanager/traindisconnected
+    ASN1-TrainStatus ::= SEQUENCE {
+        messageHeader ASN1-MessageHeader,
+        status        ASN1-TrainLocalization,
+    	...
+    }
+
+END
+
+
+     

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/cavalli"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Cavalli      " 
+            android:drawableLeft="@drawable/zoccolo"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/fantini"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Fantini      " 
+            android:drawableLeft="@drawable/zucchino"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/palio"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Palio        " 
+            android:drawableLeft="@drawable/palio"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/comparse"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Comparse     " 
+            android:drawableLeft="@drawable/tamburo"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/masgalani"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Masgalani    "
+            android:drawableLeft="@drawable/masgalano" 
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/minimasgalani"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="  Minimasgalani"
+            android:drawableLeft="@drawable/minimasgalano"
+            android:onClick="onClick"/>
+    </LinearLayout>
+</LinearLayout>

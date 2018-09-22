@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/estrazione" >
+        <file>pictures/Aquila_1.gif</file>
+        <file>pictures/Bruco_1.gif</file>
+        <file>pictures/Chiocciola_1.gif</file>
+        <file>pictures/Civetta_1.gif</file>
+        <file>pictures/Drago_1.gif</file>
+        <file>pictures/Giraffa_1.gif</file>
+        <file>pictures/Istrice_1.gif</file>
+        <file>pictures/Leocorno_1.gif</file>
+        <file>pictures/Lupa_1.gif</file>
+        <file>pictures/Montone_1.gif</file>
+        <file>pictures/Nicchio_1.gif</file>
+        <file>pictures/Oca_1.gif</file>
+        <file>pictures/Onda_1.gif</file>
+        <file>pictures/Pantera_1.gif</file>
+        <file>pictures/Selva_1.gif</file>
+        <file>pictures/Tartuca_1.gif</file>
+        <file>pictures/Torre_1.gif</file>
+        <file>pictures/palazzo_comunale.jpg</file>
+    </qresource>
+    <qresource prefix="/icons" >
+        <file>pictures/avanti.png</file>
+        <file>pictures/filenew.png</file>
+    </qresource>
+    <qresource prefix="/status" >
+        <file>pictures/buono.bmp</file>
+        <file>pictures/scarso.bmp</file>
+        <file>pictures/suff.bmp</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,3 @@
+[submodule "lib_logging"]
+	path = lib_logging
+	url = git@vanaheim-nvr:gts_common/lib_logging.git

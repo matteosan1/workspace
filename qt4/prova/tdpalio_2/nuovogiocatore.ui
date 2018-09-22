@@ -1,0 +1,253 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>NuovoGiocatore</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>NuovoGiocatore</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>432</width>
+            <height>183</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Nuovo Giocatore</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout3</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout1</cstring>
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel" row="1" column="0">
+                                    <property name="name">
+                                        <cstring>cognomeLabel</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Cognome:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="0">
+                                    <property name="name">
+                                        <cstring>nomeLabel</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Nome:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="1">
+                                    <property name="name">
+                                        <cstring>nomeEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="1">
+                                    <property name="name">
+                                        <cstring>cognomeEdit</cstring>
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer6</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout2</cstring>
+                            </property>
+                            <vbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>randomCheck</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Assegna</string>
+                                    </property>
+                                </widget>
+                                <widget class="QComboBox">
+                                    <property name="name">
+                                        <cstring>contradaCombo</cstring>
+                                    </property>
+                                </widget>
+                            </vbox>
+                        </widget>
+                    </hbox>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer5</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>40</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout4</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer1</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>okButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>OK</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>cancellaButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cancella</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer4</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>cancellaButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NuovoGiocatore</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>randomCheck</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>NuovoGiocatore</receiver>
+        <slot>enableCombo(int)</slot>
+    </connection>
+    <connection>
+        <sender>okButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NuovoGiocatore</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in declaration">vector</include>
+    <include location="local" impldecl="in declaration">giocatore.h</include>
+    <include location="local" impldecl="in implementation">nuovogiocatore.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">vector&lt;int&gt; indice;</variable>
+    <variable access="private">Giocatore g;</variable>
+</variables>
+<slots>
+    <slot>enableCombo( int state )</slot>
+    <slot>accept()</slot>
+    <slot>setContrade( QStringList lista, vector&lt;int&gt; index )</slot>
+    <slot returnType="int">assegnaContrada()</slot>
+</slots>
+<functions>
+    <function returnType="Giocatore">getGiocatore()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

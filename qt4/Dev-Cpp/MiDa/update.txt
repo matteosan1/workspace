@@ -1,0 +1,4 @@
+26/2/2005
+Migliorata stampa etichetta per pacco - Permessa ricerca di stringhe interne a testo
+Risolto il problema del listview (not sent, not paid)
+Aggiunta impossibilità ad inserire un cliente senza nome

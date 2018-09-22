@@ -1,0 +1,8 @@
+create table ordini(
+	indice_ordine int not null,
+	indice_CD smallint not null,
+	codice varchar(20), 	
+	quantita smallint,
+	prezzo float(5,2) default '0.00',
+	primary key(indice_ordine, indice_CD));
+	

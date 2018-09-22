@@ -1,0 +1,59 @@
+package com.ms.dbpalio.cavallo;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.ms.dbpalio.R;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
+public class CavDetailView extends Dialog implements View.OnClickListener {
+	
+	Button okButton;
+
+	public CavDetailView(Context context) {
+		super(context);
+		/** 'Window.FEATURE_NO_TITLE' - Used to hide the title */
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		/** Design the dialog in main.xml file */
+		setContentView(R.layout.fandetailedview);
+		okButton = (Button) findViewById(R.id.OkButton);
+		okButton.setOnClickListener(this);
+	}
+
+	public void SetText(CavalloModel f) {
+		TextView tv = (TextView) findViewById(R.id.TextView02);
+		String s = "                         " + f.getNome() + "                         ";
+		tv.setText(s);
+		
+		ListView list = (ListView) findViewById(R.id.listcarriere);
+		 
+		ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		for (int i=0; i<f.getDate().size(); i++) {	
+			map = new HashMap<String, String>();
+			map.put("anno", f.getDate().get(i));
+			map.put("contrada", f.getContrade().get(i));
+			map.put("fantino", f.getFantini().get(i));
+			mylist.add(map);
+		}
+		
+		SimpleAdapter mSchedule = new SimpleAdapter(this.getContext(), mylist, R.layout.row,
+		            new String[] {"anno", "contrada", "fantino"}, new int[] {R.id.anno, R.id.contrada, R.id.cavallo});
+		list.setAdapter(mSchedule);
+	}
+		
+	public void onClick(View v) {
+		/** When OK Button is clicked, dismiss the dialog */
+		if (v == okButton)
+			dismiss();
+	}
+}

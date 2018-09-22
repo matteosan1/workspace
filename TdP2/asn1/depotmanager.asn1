@@ -1,0 +1,11 @@
+DEPOTMANAGER DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+    IMPORTS ASN1-MessageHeader FROM MESSAGEHEADER;
+
+    --/state/depotmanager/contactchanged
+    ASN1-ContactChanged ::= SEQUENCE {
+        messageHeader   ASN1-MessageHeader,
+        closed          BOOLEAN,
+        ...
+    }
+END

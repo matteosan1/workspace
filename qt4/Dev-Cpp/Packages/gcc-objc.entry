@@ -1,0 +1,21 @@
+[Setup]
+AppName=gcc-objc
+AppVersion=3.3.1-20030804-1
+Description=GNU Compiler Collection Objective C 3.3.1-20030804-1. Contains GNU Objective C language support
+Url=http://gcc.gnu.org/
+
+[Files]
+lib\libobjc.a
+lib\libobjc.la
+lib\gcc-lib\mingw32\3.3.1\cc1obj.exe
+lib\gcc-lib\mingw32\3.3.1\include\objc\encoding.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\hash.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\NXConstStr.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\objc-api.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\objc-list.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\objc.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\Object.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\Protocol.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\sarray.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\thr.h
+lib\gcc-lib\mingw32\3.3.1\include\objc\typedstream.h

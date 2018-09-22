@@ -1,0 +1,9 @@
+0	0	Sconosciuto
+0	1	Franco
+0	2	Scatola di cartone
+1	0	Carta di credito
+1	1	Assegnato
+1	2	Busta di plastica
+2	0	Bonifico
+3	0	Bollettino postale
+4	0	Contante

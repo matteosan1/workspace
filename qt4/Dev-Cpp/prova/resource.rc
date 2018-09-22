@@ -1,0 +1,17 @@
+#include <windows.h>
+#include "resource.h"
+
+
+INTROBMP BITMAP DISCARDABLE "Intro.bmp"
+
+IDD_INTRO DIALOG DISCARDABLE 0, 0, 364, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU 
+CAPTION "Tempo di Palio"
+FONT 8, "MS Sans Serif"
+{
+   // BITMAP INTROBMP,IDC_STATIC,SS_ICON,0,0,480,360
+    CONTROL         "Intro.bmp",IDC_BUTTON1,"Button",BS_OWNERDRAW | BS_BITMAP | 
+                    BS_CENTER | BS_VCENTER | BS_FLAT | WS_DISABLED | 
+                    WS_TABSTOP,41,48,252,147
+    DEFPUSHBUTTON "&OK",IDOK,174,18,50,14
+}

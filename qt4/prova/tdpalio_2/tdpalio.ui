@@ -1,0 +1,430 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>TDPalio</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>TDPalio</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Tempo di Palio</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QFrame">
+            <property name="name">
+                <cstring>centralFrame</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Raised</enum>
+            </property>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>eventLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>40</x>
+                        <y>123</y>
+                        <width>490</width>
+                        <height>111</height>
+                    </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>20</pointsize>
+                    </font>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <item text="&amp;File" name="fileMenu">
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <action name="fileSaveAsAction"/>
+        <separator/>
+        <action name="filePrintAction"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="Insersci" name="Insersci">
+        <action name="insersciGiocatoreAction"/>
+    </item>
+    <item text="Opzioni" name="Opzioni">
+        <action name="opzioniEffetti_sonoriAction"/>
+    </item>
+    <item text="Aiuto" name="Aiuto">
+        <action name="aiutoAiutoAction"/>
+        <action name="aiutoInformazioniAction"/>
+    </item>
+    <separator/>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="label">
+            <string>Tools</string>
+        </property>
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <action name="filePrintAction"/>
+    </toolbar>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>Toolbar</cstring>
+        </property>
+        <property name="label">
+            <string>Toolbar</string>
+        </property>
+        <widget class="QToolButton">
+            <property name="name">
+                <cstring>toolGoAhead</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="iconSet">
+                <iconset>image1</iconset>
+            </property>
+        </widget>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileNewAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image2</iconset>
+        </property>
+        <property name="text">
+            <string>New</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;New</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileOpenAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image3</iconset>
+        </property>
+        <property name="text">
+            <string>Open</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Open...</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+O</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image4</iconset>
+        </property>
+        <property name="text">
+            <string>Save</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Save</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Save As</string>
+        </property>
+        <property name="menuText">
+            <string>Save &amp;As...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>filePrintAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image5</iconset>
+        </property>
+        <property name="text">
+            <string>Print</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Print...</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+P</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>insersciGiocatoreAction</cstring>
+        </property>
+        <property name="text">
+            <string>Giocatore</string>
+        </property>
+        <property name="menuText">
+            <string>Giocatore</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+G</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>aiutoInformazioniAction</cstring>
+        </property>
+        <property name="text">
+            <string>Informazioni</string>
+        </property>
+        <property name="menuText">
+            <string>Informazioni</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>aiutoAiutoAction</cstring>
+        </property>
+        <property name="text">
+            <string>&amp;Aiuto</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Aiuto</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+A</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>opzioniEffetti_sonoriAction</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>Effetti sonori</string>
+        </property>
+        <property name="menuText">
+            <string>Effetti sonori</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image0">
+        <data format="PNG" length="1685">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000065c4944415458855d97cd6e1cc711c77fffeade5d2e493124f561d1762c18081228367c0c60e416200890b7c8e3e46502e49437c83db90439c5886c599028d112c91d7276a62b87ea9e196581c5ce4ecf7457d7ffa3aaf5cd9ffeeca27e1cbc5d0002dc01693948c161dc435a317de2411c701cd5c705b888ff1e6375050164b36979e4d3d53491d5f09c98458010e646c17133e4a2c8c185eaafabae50677340c62230b9036612a97e65062690308bff66918024c724b21c2b7bfcf2df7cb1bd612587249219c9842464f17e4c274c4632c36458fb95480293624124a4fa8245f826c096c1884376d870cdb3f36bcefa9764f33a9183110bab06a27807ab300a24ab638208e8ffa38d1d243392e6a895e0645d78ac8e3f7ed131befbc06f7f75ccd7475724842cc5826ac1c6175364c6882cd42055ef65610da840aa063ce1584113e2cba36b9e1e773c3ddff287df7c8928fcfae49277e3212ffa13124e2166ac38572e45765599372a46e4602d12d1d2d75204668eb009c7838303be7e76c8861b4e4f0fc982834de6ab93aba0ce0497226b35d5260b8e35a81b4c666429788d9875c3427a6d40c6cd680c7dc7f9f9397dbf477924e54cda8d9844a9bba6662284b39847311e4289fb59625a3514e735753195048e219cae2f28aff9eb5ffec67efb80df7ffb0d6fdebd677bf03070f7baf0044301d5b9bc41526266455016299f8410104c6a6c298cebab61cb308c3c3c5eb3111c6cb73c3dd9e0caac6d8c203493d9548949255d1d93cdf3664c987f9c7d48c4cd76c7c34c6cc56ab325e5cc871b67b55ae18747f4f72b4656819a54dff345eac38aa66cba57a08c6c0a3c0ce1ee0bef5cc05ff1737752ce7cf6e9134e4b261b74fb7d955be01daf37ebae69750f2e68121c4e303fcb6cb660cd4f4cd9a8f72e363b92ef918ca3b3733e7df890dd6e87803c5cb3d21306111c70210cc9291e668607ec856a6e0e2e0f15cc05a3a56e26668be19767f77cbeed49ec797c7accc1d1965b13e36acde372c7b77acbdfaf1e4f75243e16dea079ba25dc2e231bc2adc98789a1ce523d62b33de2d1e135775d8792b8fee98a948dfbdb3bfafb9e5f1c3b2fef0ef9cfdd092ec7bdda919a223e2e5212184e56b25a97dac2557ede2c311eecafdfb2f7f73c3a3b65bd39e0f2ea3d6fdefec4d183130e8bd3f577644696bed236d12a6848dd6b65174264511d6adab02a6f3479c226ed79fef931dd8f3f30942b4a7172329e9c1e73fef4335e7eff5fcafe161f76981ee2504d692632959ce64eb1262e27270ba360dabb4365a86a25dffb867fbd17bf7bf605b63e8817e55836ba7de1e9e3477c77d7f1d5c59a57af463a4f98b7d5dbe6966ed87c48e103edcfcc9e85175686bed86d393d3ba534a27a21a5c4eefe86ccc8c5274f78f55af484f9cc1b17ae823cee952a8ae241d79c3413c367390029f42be172dedc14aef58007b60b5321d18f23a3c376bde63067bebbdd224b55622d50a68cd6dce2d1c3000a1ff8c80935270c45e32445fbf58f17b73c3fbce4ddebd7745dc78a81be1f7970f173cecf4eb8dc1fb1ac2d223667b517f4a5131159c8adf4aa2e2b84bbb0869a665efcf8fd2b4ef7ff64d70fbc7977cdc5cf0ee8eef7ec6e3ff0fa93e7dc71411341386bec56560da89a540bc55040d03eadea955636e7019073777bcb7d7f4ddf756c05432fca30c2ee860faf2f616d957c7589bafba2d98066614710d9cc2a545e5b8070afe68cad4b12510b706795131bcdef947160d8dd629b48b97b032002b75690bc3ebf207d342453edd154005beadc678f4c39435fb06a5e12249c1191fd0ec3286afd444bde9cc9d69e59139c9c9ccc3e3a4c88165d3d68d4b22c87529c945764354d27baf11e4b46f6821224b7c8426394fb549d9bc1353514202391882a666a0ee63565541982dcb1b42269dd7a1a24b159178a125644c2c2e53e8280a9327b755dc7710f3fc8c96c413faff65f6bb896f2149633f4d144f4fd3d3e0c0cf77b6cb32527c35270a8d413d4640333cf6be9575448876cd658d98836e7ab9df65a9f32ee7bfaee86712cd1f5d649cbd823d6b4e6261a9352cda81afca2323990dca31ccb16b6e94cd5ccdd99d09a30ad22b238098d1ef9b29451d9935a032aaf9b9a24113bae81cc4e4914a336d0409b2ea783692d9e4ae4d586524a1cdb46673047961171441b9b13cd3b029ce401742bc70d996c8ba89b55da543e5b40a19094131a548f6c0967807d011f4996db617362fdd4d454cccdbd0611a4769cff01859cf415fb1597630000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="1234">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af400000499494441545885cd975b6c14551880bf7399d9ddeeb6f402f40a4548012f29511a410c9780216a8da81889a8892426801823c61a63c4a8096a225a144d2c1a8997a02848783011153588a4a0e1a23122b425d092a6f76ed9ee6e7767e6f8b060c0b0a59b16ebff3267e64ccef79d3f73fe7346186318cd90a34aff3f08e8741da26af38dc0f34413d7a364037ebd09696d47d9a06d2eba9e6f5f78ffaff74c5df62539e933e0993a4bc9ea952baa4a665616cfa32fb10dd7bc09e40e77d64315986069c9034b2bf96c5335772db94692308fe39aaf104cbff202e020a0b12b49149bda750b79a9e66642b63d87a8fb3d82fbafac8048757b4ad01c85c66e78f09ee9bcbb7e3ee5e579c544dc0f31623d88e0151250da288d918ab80727fbe0d7d350795d215b37cc63e1fc891651ef595c6f173079e4052ceb782c6ed8fddd492271481868e8819f9ac0d8016a6b6ee0b187afc656d62212e64704778fac80d2ab51fad0179f1ee5adb70fd0d19dc04838d109bb8f4153afe4d16557b1f1e94a0ac7072710653b46bc08f8321110e94ab1b8e913d0561ed27a8501b3726c593eb754cfa0b82c9fce306801551361d62468eb4cb0fee366f61fee832cfb1b6c7b0dca6e185e1d48450f42ac22e85fdbd9de1fd9b1ed10f5075b30407b04761e812f0f833f64f3da9ac92caf2e42a116e3886f81db472203175434df2c909bf1446559452915959319f034e1084c2b82fbaa60ca38f8fa97086fece8a6a78f1841fb6594f52ada76d2652003011bb46f1c42bf8ecb43c1b1b9945594833f4857188a7361f96c985b010dcd496a77f571b4c98180b5136dad3575d9a7321398b315b4beb8b62b3b25a57d2b306c50da979f3fa91ce10fd11e866c1f2c9b0d77ce004b1ab6ec89f1f9812428b5cfd485e65e8a93763362fc54100210a9a274be8d04412b8e48ba06a203060f9032b554771e814812eea81414165808653052e5a4c3a41710f25c3514e71f00220bcfacc3a566464550850345b4f407f19210f4436e08f2b2e1cf368f83db0638ddea6194aa47cad5e930999c07a6e0b14b19f1cc927905eab60593e87583382e04032970c118701d8786c6284dcd9e71947e0f296f058e649e818b632949531b0a5913ee5d54cc599dcfc63d30e0426e760a3e26083d5d715a5a13b84685f1eba780f72f37f0e504fc400d0eeb4a4ab2ac05b34a39160951ff174805b939909f0301db70e64c8c8e2e0794fe1d255701fb8732b3c1044a813a5caa2ba6e633edda527e38ad69ed482d84312128c801e33a3435c688c600cbda82106b81f050e0830b08f101422dce2e198b5558c4bee392de085836e485521f5cffd9386d6d03389e0c63ebe740bc036474cc1e4440cd94968d3f6f1ca73a25d138f86cc8cb8190cfd0d1d64f4f6f1294f5074aae047e4eb145da21331350da31521189418214bc201b24495a9afb89c70d68eb2384ac01da33a20e49406a8cd0c41d41202b95f6646c80aece7e5c4f46b1ac1740d48271329df5d00494d248453020c8c93244ba2384c30950fa044a3d8261ef30b8ffc4204732dd85d448274e4f7b98706f0294b5032917017b878fbe9c80d44f22657d5f4f7f7b2ceefd86653d71ee24dc3c5270186437fcaf62d4ff0d475de06fc49e9d2cb9aa3d9c0000000049454e44ae426082</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="173">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000007449444154388dedd5c109c0200c05d06fe936812c10b2ffdd85d25385b6a991480f053f081af0291210f828c5a9d9c4de96cd2b9ad9eb0000660e2fe0c2519839c4f70c4c446d5e6b3538cf928245e4b2f6f014acaa8fda1d4fc1a5741b22079f9d111d96ea8a912c78c10bee64e60719f57e9203ad452a04cc4e50200000000049454e44ae426082</data>
+    </image>
+    <image name="image3">
+        <data format="PNG" length="210">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000009949444154388ded94410e85200c445f89c7367f61bc775d2848a42860ffced9548bbe8e13043e1d928177f481a123dc2b34f6f47a3de2b865a8843f4001982a0b3d5f62c58300aa1ad70550449ab9d507a773a8a4ba4f92a2df333c64c63bebbd82e5b8addecbcc7820eb4266c639745dfa80f36faf66c66fa19c3f882fb470ec05cdc0bed07893f68e171492635f686c3eeff6ba3c8fdd366dc4c0452c8781f8080000000049454e44ae426082</data>
+    </image>
+    <image name="image4">
+        <data format="PNG" length="217">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000a049444154388dd5954d0a802010859fd14668e18de662d222bc98376a21b4ac451992c66469e0b7f187f1f11c47052a218e762daddbfb9e99f6568f80b5364b8588ce35440400e80a398ce8f99034d2292cc37c8ebd530feb583a05e954341f8a027b2a7d3a1f09bf854dc5d5d953aa396e4f38cab199e2d2e108abe156f82e30977fcb4d8ff942d75dbebed2e143953a93f6caad3d6111f44b7d4f820ff9c0069bb51ecded318c5c0000000049454e44ae426082</data>
+    </image>
+    <image name="image5">
+        <data format="PNG" length="725">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000029c49444154388d8d95ad76db4010853ff718cc3289d950d06136344c98c362964087256f503f426161021be6b2842550612e8be14299496c866dc14ab2fc77da2192665777eedc3b5af53813afafaf414448d3742f6f6600a82a005555912409575757bdeebefe396011613299b440876b4d946589f7fe68cf596080cd6673047658485571cefd3ff02900333b2a70aa23806fa792799e07336b9938e770ceede9dde82f2247fa9e65acaa244942599688486b54374eb5ff4fc6105b3c9c882e6853ec9c142719376c4e31ede655756f42ba71a40dc06ab50a5996311c0ecf8237467e7e7e022092309f5fb7787b8cdfdfdf83f79efc2347668288b40087d786695994e479ceb6daf2f0f01066b319d7d7d7bd5e1774b3f154c5163580d34c019ca408020e7ce159afffb0dd16a81a1717198bc5224ad130bd9c5ee2d2145503538e6c3103849c4f3e78656a53d2af94e79767fc57fcfad4946c7411419f9e7e85b228c3ffc457f80aa3300a12248cc228acd7ebf0e3fbcf301e8fc360908524494236c842bfda56dcdddd9c75f73052522e999223cc98311e8f4964486905cfbf5ea8aa8a7490d237c0fb22cea31988106b48ed36385c54dc14c4f160dfb9c133b4217fd88019e97018d76b77fa6551e045a29e66b4be39882ed69d38031520e604f0b6c5886788df6c5a4f1cf5b835096b00b17628148b35746f673b39d278da0945e9236065e705adc976371a200a76b8e2302ba9fb6c7a633299f20debb06cc96a7cb4faba07ea9a6d35680d58cb39180c582cee2263ef7d631588412540159d338b30d2b0b21d183bcd31430496cb25f3f9bcd7cfb28c8fb70f7ebfbda16ac4f347d81b3ee93ccb0eb2edb39ea6e572c9e3e3630f3a87d06ab50aabd51bdbfaffa5686dcace99dd5f0354cb785f1993e984dbdb5beeefef5bbcbfd1f69e0c3fec24860000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>fileNewAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>fileNew()</slot>
+    </connection>
+    <connection>
+        <sender>fileOpenAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>fileOpen()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>fileSave()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAsAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>fileSaveAs()</slot>
+    </connection>
+    <connection>
+        <sender>filePrintAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>filePrint()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>insersciGiocatoreAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>nuovoGiocatore()</slot>
+    </connection>
+    <connection>
+        <sender>aiutoInformazioniAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>aiutoInformazioni()</slot>
+    </connection>
+    <connection>
+        <sender>aiutoAiutoAction</sender>
+        <signal>activated()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>help()</slot>
+    </connection>
+    <connection>
+        <sender>opzioniEffetti_sonoriAction</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>TDPalio</receiver>
+        <slot>abilitaSuono(bool)</slot>
+    </connection>
+    <connection>
+        <sender>toolGoAhead</sender>
+        <signal>clicked()</signal>
+        <receiver>TDPalio</receiver>
+        <slot>nuovaFase()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in declaration">vector</include>
+    <include location="local" impldecl="in declaration">giocatore.h</include>
+    <include location="local" impldecl="in declaration">contrada.h</include>
+    <include location="local" impldecl="in declaration">fantino.h</include>
+    <include location="local" impldecl="in declaration">cavallo.h</include>
+    <include location="local" impldecl="in declaration">barbero.h</include>
+    <include location="local" impldecl="in implementation">tdpalio.ui.h</include>
+</includes>
+<forwards>
+    <forward>class TRandom;</forward>
+</forwards>
+<variables>
+    <variable access="private">int nProva;</variable>
+    <variable access="public">enum Mese {Luglio, Agosto, Straordinario};</variable>
+    <variable access="private">Mese mese;</variable>
+    <variable access="public">enum Fase {eInizio, eEstrazione, eTratta, eProve, eSegnatura, ePalio, eFinePalio};</variable>
+    <variable access="private">int anno;</variable>
+    <variable access="private">bool modificato;</variable>
+    <variable access="private">int corrono[10];</variable>
+    <variable access="private">vector&lt;Contrada&gt; contrade;</variable>
+    <variable access="private">vector&lt;Giocatore&gt; giocatori;</variable>
+    <variable access="private">vector&lt;Fantino&gt; fantini;</variable>
+    <variable access="private">vector&lt;Cavallo&gt; cavalli;</variable>
+    <variable access="private">int luglio[17], agosto[17], settembre[17];</variable>
+    <variable access="private">TRandom *random;</variable>
+    <variable access="private">vector&lt;Barbero&gt; barberi;</variable>
+    <variable access="private">QString curFile;</variable>
+    <variable>int ordine_prove[10][6];</variable>
+    <variable access="private">bool soundWanted;</variable>
+    <variable access="private">Fase fase;</variable>
+</variables>
+<slots>
+    <slot>controller()</slot>
+    <slot>formaCavalli()</slot>
+    <slot returnType="QString">getData()</slot>
+    <slot>visualizzaEstrazione()</slot>
+    <slot>SceltaStrategia()</slot>
+    <slot>SceltaCavalli()</slot>
+    <slot>Assegnazione( int * cav )</slot>
+    <slot>SceltaFantino()</slot>
+    <slot>Segnatura()</slot>
+    <slot>RisposteFantini()</slot>
+    <slot>InserisciPartito()</slot>
+    <slot>RispostePartiti()</slot>
+    <slot>Prove()</slot>
+    <slot>fileNew()</slot>
+    <slot>caricaFile( const QString &amp; fileName )</slot>
+    <slot>fileOpen()</slot>
+    <slot>salvaFile( const QString &amp; fileName )</slot>
+    <slot returnType="bool">fileSave()</slot>
+    <slot returnType="bool">fileSaveAs()</slot>
+    <slot>filePrint()</slot>
+    <slot>closeEvent( QCloseEvent * event )</slot>
+    <slot>nuovoGiocatore()</slot>
+    <slot>aiutoInformazioni()</slot>
+    <slot>estrazione( int n )</slot>
+    <slot>help()</slot>
+    <slot>abilitaSuono( bool a )</slot>
+    <slot>nuovaFase()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">Avversaria( int io )</function>
+    <function returnType="bool">salvaCorrente()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,159 @@
+#include "regole.h"
+#include "ComboBoxDelegate.h"
+
+#include <QHeaderView>
+
+Regole::Regole(QWidget *parent, Punteggi* p)
+    : QDialog(parent) {
+
+    ui.setupUi(this);
+
+    model = new GiocatoriInsert();
+
+    ui.tableView->verticalHeader()->hide();
+    ui.tableView->setItemDelegateForColumn(2, new ComboBoxDelegate());
+    ui.tableView->setModel(model);
+    ui.tableView->show();
+
+    connect(ui.pushButton, SIGNAL(pressed()), this, SLOT(insertRow()));
+    connect(ui.pushButton_2, SIGNAL(pressed()), this, SLOT(removeRow()));
+
+    connect(ui.checkBox_13, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_2, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_3, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_4, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_5, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_6, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_7, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_8, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_10, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_11, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_10, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_11, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_9, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+    connect(ui.checkBox_12, SIGNAL(stateChanged(int)), this, SLOT(changeCheck(int)));
+
+    connect(ui.spinBox_7, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_8, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_9, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_10, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_11, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_12, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_20, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_21, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_22, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_6, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+
+    connect(ui.spinBox_19, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_13, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_14, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_15, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_16, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_17, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_18, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_23, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_24, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+    connect(ui.spinBox_5, SIGNAL(valueChanged(int)), this, SLOT(changeSpin(int)));
+
+    punt = p;
+    changeSpin(0);
+    changeCheck(0);
+}
+
+void Regole::insertRow() {
+    ui.tableView->model()->insertRows(0, 1);
+}
+
+void Regole::removeRow() {
+
+    int row = ui.tableView->currentIndex().row();
+    ui.tableView->model()->removeRows(row, 1);
+}
+
+void Regole::changeCheck(int a) {
+
+    // check numero portieri se non auto_portiere almeno 2 portieri in squadra
+    if (ui.checkBox_13->checkState() == Qt::Checked)
+        punt->auto_portiere = 1;
+    else
+        punt->auto_portiere = 0;
+
+    if (ui.checkBox_9->checkState() == Qt::Checked)
+        punt->sei_politico = 1;
+    else
+        punt->sei_politico = 0;
+
+    if (ui.checkBox_12->checkState() == Qt::Checked)
+        punt->sv_portiere = 1;
+    else
+        punt->sv_portiere = 0;
+
+    if (ui.checkBox_10->checkState() == Qt::Checked)
+        punt->schemi[0] = 1;
+    else
+        punt->schemi[0] = 0;
+
+    if (ui.checkBox_2->checkState() == Qt::Checked)
+        punt->schemi[1] = 1;
+    else
+        punt->schemi[1] = 0;
+
+    if (ui.checkBox_3->checkState() == Qt::Checked)
+        punt->schemi[2] = 1;
+    else
+        punt->schemi[2] = 0;
+
+    if (ui.checkBox_4->checkState() == Qt::Checked)
+        punt->schemi[3] = 1;
+    else
+        punt->schemi[3] = 0;
+
+    if (ui.checkBox_5->checkState() == Qt::Checked)
+        punt->schemi[4] = 1;
+    else
+        punt->schemi[4] = 0;
+
+    if (ui.checkBox_6->checkState() == Qt::Checked)
+        punt->schemi[5] = 1;
+    else
+        punt->schemi[5] = 0;
+
+    if (ui.checkBox_7->checkState() == Qt::Checked)
+        punt->schemi[6] = 1;
+    else
+        punt->schemi[6] = 0;
+
+    if (ui.checkBox_11->checkState() == Qt::Checked)
+        punt->schemi[7] = 1;
+    else
+        punt->schemi[7] = 0;
+
+    if (ui.checkBox_8->checkState() == Qt::Checked)
+        punt->schemi[8] = 1;
+    else
+        punt->schemi[8] = 0;
+}
+
+void Regole::changeSpin(int a) {
+
+    punt->reti[0] = ui.spinBox_7->value();
+    punt->reti[1] = ui.spinBox_8->value();
+    punt->reti[2] = ui.spinBox_9->value();
+    punt->reti[3] = ui.spinBox_10->value();
+    punt->reti[4] = ui.spinBox_11->value();
+    punt->reti[5] = ui.spinBox_12->value();
+    punt->reti[6] = ui.spinBox_20->value();
+    punt->reti[7] = ui.spinBox_21->value();
+    punt->reti[8] = ui.spinBox_22->value();
+    punt->reti[9] = ui.spinBox_6->value();
+
+    punt->gsu = ui.spinBox_19->value();
+    punt->rp = ui.spinBox_13->value();
+    punt->rsb = ui.spinBox_14->value();
+    punt->gse = ui.spinBox_15->value();
+    punt->as = ui.spinBox_16->value();
+    punt->am = ui.spinBox_17->value();
+    punt->es = ui.spinBox_18->value();
+    punt->rse = ui.spinBox_23->value();
+    punt->au = ui.spinBox_24->value();
+}

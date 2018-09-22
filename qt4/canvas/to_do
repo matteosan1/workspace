@@ -1,0 +1,11 @@
+1) da questo schema metterci i rettangoli soli con il numero di posti rimasto scritto sopra
+2) per ogni tavolo aggiungere una finestra con numero di posti = lunghezza, numero del tavolo...la posizione e` ininfluente
+3) clickando su ogni tavolo viene fuori una lista con le varie prenotazioni e i posti vuoti rimasti
+4) aggiungere una finestra per aggiungere le prenotazioni
+5) come mettere una prenotazione in un tavolo ??? lasciare aperta la lista delle prenotazioni e clickare sul tavolo e sulla prenotazione ???
+6) aggiungere i vari pulsanti per sistemare i posti automaticamente
+7) avvertire se alla fine sono rimaste fuori alcune prenotazioni
+8) permettere la modifica dei posti a tavola per ogni tavolo
+9) sistemare le eventuali prenotazioni mancanti come sopra
+10) in futuro semmai aggiungere la possibilita` di tenere tutte le informazioni giorno per giorno
+11) varie opzioni di stampa, metterci tutte le prenotazioni in ordine alfabetico e le prenotazioni per tavolo

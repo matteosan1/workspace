@@ -1,0 +1,37 @@
+#ifndef OFFERTAFANTINO_H
+#define OFFERTAFANTINO_H
+
+#include <windows.h>
+#include "fantino.h"
+#include "utility.h"
+#include <string>
+
+using namespace std;
+
+class OffertaFantino {
+    public:
+        OffertaFantino(Fantino fan, int c, int d, string* a);
+        virtual ~OffertaFantino();
+
+        int getAVincere() { return avincere; };
+        int getAPerdere() { return aperdere; };
+        int getContrada() { return indice; };
+        bool isCorrere() { return radiome; };
+
+        void InitDlg();
+        BOOL OnExit();
+
+        BOOL CALLBACK DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+        HWND hwndCtl;
+
+    private:
+        int contrada;
+        Fantino fantino;
+        int indice;
+        int io;
+        int avincere, aperdere;
+        bool radiome, radioloro;
+        string contrade[10];
+};
+
+#endif

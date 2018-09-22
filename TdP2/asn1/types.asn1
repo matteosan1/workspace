@@ -1,0 +1,61 @@
+CLIENT DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+
+
+    ASN1-TrainID ::= PrintableString
+
+    ASN1-ServiceInfo ::= SEQUENCE {
+        line  PrintableString,
+        route INTEGER,
+        path  INTEGER,
+        delay INTEGER
+    }
+
+    ASN1-VehicleLocalization ::= SEQUENCE {
+        tag             PrintableString,
+        headDistance    INTEGER,
+        centerDistance  INTEGER,
+        tailDistance    INTEGER,
+        speed           INTEGER,
+        ...
+    }
+
+    ASN1-VehicleDiagnostic ::= SEQUENCE {
+        cab1      BOOLEAN,
+        cab2      BOOLEAN,
+        locErr    BOOLEAN,
+        dmrErr    BOOLEAN,
+        rightDoor BOOLEAN,
+        leftDoor  BOOLEAN,
+        towed     BOOLEAN
+    }
+
+    -- UCS related types
+
+    ASN1-TrainLocalization ::= SEQUENCE {
+        train       ASN1-TrainID,
+        service     ASN1-ServiceInfo,
+        time        UTCTime,
+        position    ASN1-VehicleLocalization,
+        diagnostic  ASN1-VehicleDiagnostic,
+        ...
+    }
+
+    ASN1-RouteID ::= INTEGER
+
+    ASN1-RouteStatusEnum ::= ENUMERATED {
+        idle(-1),
+        notCreated(0),
+        created(1),
+        occupied(2),
+        disabled(3),
+	canceled(4)
+    }
+
+    ASN1-RouteStatus ::= SEQUENCE {
+        route  ASN1-RouteID,
+        ucsId  INTEGER,
+        status ASN1-RouteStatusEnum,
+	train  ASN1-TrainID,
+        ...
+    }
+END

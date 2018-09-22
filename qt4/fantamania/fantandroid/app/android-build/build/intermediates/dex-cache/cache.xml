@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/sani/qt4/fantamania/fantandroid/app/android-build/libs/QtAndroid-bundled.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c5ac680f668b66787f984c88ce429ad69b266b58">
+        <dex dex="/Users/sani/qt4/fantamania/fantandroid/app/android-build/build/intermediates/pre-dexed/debug/QtAndroid-bundled-486e8d5e7437720b076bde690933b2c7b948a9a4.jar" />
+    </item>
+
+</items>

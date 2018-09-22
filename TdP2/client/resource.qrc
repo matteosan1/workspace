@@ -1,0 +1,75 @@
+<RCC>
+    <qresource prefix="/estrazione" >
+        <file>../data/pictures/Aquila_1.gif</file>
+        <file>../data/pictures/Bruco_1.gif</file>
+        <file>../data/pictures/Chiocciola_1.gif</file>
+        <file>../data/pictures/Civetta_1.gif</file>
+        <file>../data/pictures/Drago_1.gif</file>
+        <file>../data/pictures/Giraffa_1.gif</file>
+        <file>../data/pictures/Istrice_1.gif</file>
+        <file>../data/pictures/Leocorno_1.gif</file>
+        <file>../data/pictures/Lupa_1.gif</file>
+        <file>../data/pictures/Montone_1.gif</file>
+        <file>../data/pictures/Nicchio_1.gif</file>
+        <file>../data/pictures/Oca_1.gif</file>
+        <file>../data/pictures/Onda_1.gif</file>
+        <file>../data/pictures/Pantera_1.gif</file>
+        <file>../data/pictures/Selva_1.gif</file>
+        <file>../data/pictures/Tartuca_1.gif</file>
+        <file>../data/pictures/Torre_1.gif</file>
+        <file>../data/pictures/palazzo_comunale.jpg</file>
+    </qresource>
+    <qresource prefix="/assegnazione" >
+        <file>../data/pictures/tabellone.jpg</file>	
+	<file>../data/pictures/tabellone_1.png</file>	
+	<file>../data/pictures/tabellone_2.png</file>	
+	<file>../data/pictures/tabellone_3.png</file>	
+	<file>../data/pictures/tabellone_4.png</file>	
+	<file>../data/pictures/tabellone_5.png</file>	
+	<file>../data/pictures/tabellone_6.png</file>	
+	<file>../data/pictures/tabellone_7.png</file>	
+	<file>../data/pictures/tabellone_8.png</file>	
+	<file>../data/pictures/tabellone_9.png</file>	
+	<file>../data/pictures/tabellone_10.png</file>	
+	<file>../data/pictures/tabellone_11.png</file>	
+	<file>../data/pictures/tabellone_12.png</file>	
+	<file>../data/pictures/tabellone_13.png</file>	
+	<file>../data/pictures/tabellone_14.png</file>	
+	<file>../data/pictures/tabellone_15.png</file>	
+	<file>../data/pictures/tabellone_16.png</file>	
+	<file>../data/pictures/tabellone_17.png</file>	
+	<file>../data/pictures/tabellone_18.png</file>	
+	<file>../data/pictures/tabellone_19.png</file>	
+	<file>../data/pictures/tabellone_20.png</file>	
+	<file>../data/pictures/tabellone_21.png</file>	
+	<file>../data/pictures/tabellone_aquila.png</file>	
+	<file>../data/pictures/tabellone_bruco.png</file>	
+	<file>../data/pictures/tabellone_chiocciola.png</file>	
+	<file>../data/pictures/tabellone_civetta.png</file>	
+	<file>../data/pictures/tabellone_drago.png</file>	
+	<file>../data/pictures/tabellone_giraffa.png</file>	
+	<file>../data/pictures/tabellone_istrice.png</file>	
+	<file>../data/pictures/tabellone_leocorno.png</file>	
+	<file>../data/pictures/tabellone_lupa.png</file>	
+	<file>../data/pictures/tabellone_nicchio.png</file>	
+	<file>../data/pictures/tabellone_oca.png</file>	
+	<file>../data/pictures/tabellone_onda.png</file>	
+	<file>../data/pictures/tabellone_pantera.png</file>	
+	<file>../data/pictures/tabellone_selva.png</file>	
+	<file>../data/pictures/tabellone_tartuca.png</file>	
+	<file>../data/pictures/tabellone_torre.png</file>	
+	<file>../data/pictures/tabellone_montone.png</file>	
+    </qresource>
+    <qresource prefix="/icons" >
+        <file>../data/pictures/avanti.png</file>
+        <file>../data/pictures/connect_no.png</file>
+        <file>../data/pictures/filenew.png</file>
+        <file>../data/pictures/history.png</file>
+    </qresource>
+    <qresource prefix="/status" >
+        <file>../data/pictures/buono.bmp</file>
+        <file>../data/pictures/scarso.bmp</file>
+        <file>../data/pictures/suff.bmp</file>
+        <file>../data/pictures/killer.png</file>
+    </qresource>
+</RCC>

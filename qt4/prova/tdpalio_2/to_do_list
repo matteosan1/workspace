@@ -1,0 +1,28 @@
+# to do list
+
+problema nei soldi nella strategia di contrada ?
+
+rete neurale scelta fantino
+cosa serve: strategia contrada, quantita di soldi
+(limite per contrada ? se si rifare anche la strategia di contrada),
+feeling fantino contrada
+ritorna: rating del fantino e offerta dei soldi
+
+tire a vincere          0.5
+tire a vincere          1.0
+tire a vincere          1.5     1-5
+neutrale a vincere      0.5
+neutrale a vincere      1.0
+neutrale a vincere      1.5     3-7
+neutrale a vendersi     0.5
+neutrale a vendersi     1.0
+neutrale a vendersi     1.5     7-12
+si vende                0.5
+si vende                1.0
+si vende                1.5     12-oo
+
+costo del fantino: ??????????
+
+risposta del fantino:
+
+partiti nelle due direzioni:
